@@ -3,7 +3,7 @@ package BBDD;
 import java.util.ArrayList;
 
 public class EmailMarketingEntity {
-    ArrayList<ClienteEntity> listaInteresados = new ArrayList<ClienteEntity>();
+    private ArrayList<ClienteEntity> listaInteresados = new ArrayList<>();
 
     public ArrayList<ClienteEntity> getListaInteresados() {
         return listaInteresados;
