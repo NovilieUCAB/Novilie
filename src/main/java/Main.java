@@ -1,30 +1,35 @@
-import com.google.auth.oauth2.GoogleCredentials;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
+import BBDD.Conection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
-import java.io.FileInputStream;
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class Main extends Application {
-    public static void main(String args[]) throws IOException {
-        FileInputStream serviceAccount =
-                new FileInputStream("novilie-firebase-adminsdk-od77w-74a1f74d4a.json");
 
-        FirebaseOptions options = new FirebaseOptions.Builder()
-                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setDatabaseUrl("https://novilie.firebaseio.com")
-                .build();
+    public static void main(String args[]) throws IOException, ExecutionException, InterruptedException {
 
-        FirebaseApp.initializeApp(options);
+        try{
+            Conection db = new Conection();
 
+            // Create a Map to store the data we want to set
+            /*Map<String, Object> docData = new HashMap<>();
+            docData.put("name", "Los Angeles");
+            docData.put("state", "CA");
+            docData.put("country", "USA");*/
+
+            // Add a new document (asynchronously) in collection "cities" with id "LA"
+            //ApiFuture<WriteResult> future = db.getDatabase().collection("cities").document("LA").set(docData);
+
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            e.printStackTrace();
+        }
         launch(args);
     }
-
 
     @Override
     public void start(Stage primaryStage) throws Exception {
