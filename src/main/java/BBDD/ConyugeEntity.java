@@ -9,20 +9,20 @@ public class ConyugeEntity {
     private int edad;
     private int diaNacimiento;
     private int mesNacimiento;
-    private int añoNacimiento;
+    private int anhoNacimiento;
     private String email;
     private int telefono;
     private String trabajo;
     private ArrayList<Integer> telefonos = new ArrayList<>();
 
-    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, int dia, int mes, int año, String email,
+    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, int dia, int mes, int anho, String email,
                          int telefono, String trabajo) {
 
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.añoNacimiento=año;
+        this.anhoNacimiento=anho;
         this.mesNacimiento=mes;
         this.diaNacimiento=dia;
         this.email = email;
@@ -50,7 +50,7 @@ public class ConyugeEntity {
 
     public int getMesNacimiento() { return mesNacimiento; }
 
-    public int getAñoNacimiento() { return añoNacimiento; }
+    public int getAnhoNacimiento() { return anhoNacimiento; }
 
     public String getEmail() {
         return email;
@@ -80,7 +80,7 @@ public class ConyugeEntity {
 
     public void setMesNacimiento(int mesNacimiento) { this.mesNacimiento = mesNacimiento; }
 
-    public void setAñoNacimiento(int añoNacimiento) { this.añoNacimiento = añoNacimiento; }
+    public void setAnhoNacimiento(int anhoNacimiento) { this.anhoNacimiento = anhoNacimiento; }
 
     public void setEmail(String email) {
         this.email = email;
