@@ -1,15 +1,15 @@
 package BBDD;
 
 public class AgenciaInmobiliariaEntity {
-    String nombreAgencia;
-    String lema;
+    private String nombreAgencia;
+    private String lema;
     // logo
-    String urlPaginaWeb;
-    String parroquiaDireccion;
-    String municipioDireccion;
-    String estadoDireccion;
-    String ciudadDireccion;
-    String direccion;
+    private  String urlPaginaWeb;
+    private String parroquiaDireccion;
+    private String municipioDireccion;
+    private String estadoDireccion;
+    private String ciudadDireccion;
+    private String direccion;
 
     public AgenciaInmobiliariaEntity(String nombreAgencia, String lema, String urlPaginaWeb, String parroquiaDireccion, String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion) {
         this.nombreAgencia = nombreAgencia;
