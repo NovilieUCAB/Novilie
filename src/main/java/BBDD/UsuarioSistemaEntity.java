@@ -5,17 +5,17 @@ public class UsuarioSistemaEntity {
     private String Apellido;
     private String nombreUsuario;
     private int nivelPermiso;
-    private String contraseña;
+    private String contrasenha;
     private String email;
 
     public UsuarioSistemaEntity(String nombre, String apellido, String nombreUsuario, int nivelPermiso,
-                                String contraseña, String email) {
+                                String contrasenha, String email) {
 
         this.nombre = nombre;
         Apellido = apellido;
         this.nombreUsuario = nombreUsuario;
         this.nivelPermiso = nivelPermiso;
-        this.contraseña = contraseña;
+        this.contrasenha = contrasenha;
         this.email = email;
     }
 
@@ -35,8 +35,8 @@ public class UsuarioSistemaEntity {
         return nivelPermiso;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasenha() {
+        return contrasenha;
     }
 
     public String getEmail() {
@@ -59,8 +59,8 @@ public class UsuarioSistemaEntity {
         this.nivelPermiso = nivelPermiso;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenha(String contrasenha) {
+        this.contrasenha = contrasenha;
     }
 
     public void setEmail(String email) {
