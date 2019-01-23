@@ -1,18 +1,18 @@
 package BBDD;
 
 public class AsesorInmobiliarioEntity {
-    int cedula;
-    String nombre;
-    String apellido;
-    int diaNacimiento;
-    int mesNacimiento;
-    int añoNacimiento;
-    String parroquiaDireccion;
-    String municipioDireccion;
-    String estadoDireccion;
-    String ciudadDireccion;
-    String direccion;
-    String email;
+    private int cedula;
+    private String nombre;
+    private String apellido;
+    private int diaNacimiento;
+    private int mesNacimiento;
+    private int añoNacimiento;
+    private String parroquiaDireccion;
+    private String municipioDireccion;
+    private String estadoDireccion;
+    private String ciudadDireccion;
+    private String direccion;
+    private String email;
 
     public AsesorInmobiliarioEntity(int cedula, String nombre, String apellido, int diaNacimiento, int mesNacimiento,
                                     int añoNacimiento, String parroquiaDireccion, String municipioDireccion,
