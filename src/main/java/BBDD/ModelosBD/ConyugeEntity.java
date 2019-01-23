@@ -1,4 +1,8 @@
-package Backend;
+package BBDD.ModelosBD;
+
+import BBDD.Telefono;
+
+import java.util.List;
 
 public class ConyugeEntity {
     int cedula;
@@ -9,10 +13,10 @@ public class ConyugeEntity {
     int mesNacimiento;
     int añoNacimiento;
     String email;
-    int telefono;
+    List<Telefono> telefono;
     String trabajo;
 
-    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, int dia, int mes, int año, String email, int telefono, String trabajo) {
+    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, int dia, int mes, int año, String email, String trabajo) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -21,7 +25,6 @@ public class ConyugeEntity {
         this.mesNacimiento=mes;
         this.diaNacimiento=dia;
         this.email = email;
-        this.telefono = telefono;
         this.trabajo = trabajo;
     }
 
@@ -51,7 +54,7 @@ public class ConyugeEntity {
         return email;
     }
 
-    public int getTelefono() {
+    public List<Telefono> getTelefono() {
         return telefono;
     }
 
@@ -81,7 +84,7 @@ public class ConyugeEntity {
         this.email = email;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(List<Telefono> telefono) {
         this.telefono = telefono;
     }
 
