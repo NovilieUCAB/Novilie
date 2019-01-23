@@ -1,4 +1,6 @@
-package Backend;
+package BBDD;
+
+import java.util.ArrayList;
 
 public class ConyugeEntity {
     int cedula;
@@ -11,8 +13,11 @@ public class ConyugeEntity {
     String email;
     int telefono;
     String trabajo;
+    ArrayList<Integer> telefonos = new ArrayList<Integer>();
 
-    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, int dia, int mes, int año, String email, int telefono, String trabajo) {
+    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, int dia, int mes, int año, String email,
+                         int telefono, String trabajo) {
+
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -88,5 +93,14 @@ public class ConyugeEntity {
     public void setTrabajo(String trabajo) {
         this.trabajo = trabajo;
     }
+
+    public void addTelefono(int telefono) {
+        this.telefonos.add(telefono);
+    }
+
+    public void removeTelefono(int telefono) {
+        this.telefonos.remove(telefono);
+    }
+
 }
 
