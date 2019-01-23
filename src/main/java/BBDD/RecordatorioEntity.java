@@ -7,20 +7,20 @@ public class RecordatorioEntity {
     private int horaCreacion;
     private int diaCreacion;
     private int mesCreacion;
-    private int añoCreacion;
+    private int anhoCreacion;
     private String descripcion;
     //lista ReferenciasAdjuntas
 
 
     public RecordatorioEntity(int cedulaDestinatario, String titulo, int minutoreacion, int horaCreacion, int diaCreacion,
-                              int mesCreacion, int añoCreacion, String descripcion) {
+                              int mesCreacion, int anhoCreacion, String descripcion) {
         this.cedulaDestinatario = cedulaDestinatario;
         this.titulo = titulo;
         this.minutoreacion = minutoreacion;
         this.horaCreacion = horaCreacion;
         this.diaCreacion = diaCreacion;
         this.mesCreacion = mesCreacion;
-        this.añoCreacion = añoCreacion;
+        this.anhoCreacion = anhoCreacion;
         this.descripcion = descripcion;
     }
 
@@ -48,8 +48,8 @@ public class RecordatorioEntity {
         return mesCreacion;
     }
 
-    public int getAñoCreacion() {
-        return añoCreacion;
+    public int getAnhoCreacion() {
+        return anhoCreacion;
     }
 
     public String getDescripcion() {
@@ -80,8 +80,8 @@ public class RecordatorioEntity {
         this.mesCreacion = mesCreacion;
     }
 
-    public void setAñoCreacion(int añoCreacion) {
-        this.añoCreacion = añoCreacion;
+    public void setAnhoCreacion(int anhoCreacion) {
+        this.anhoCreacion = anhoCreacion;
     }
 
     public void setDescripcion(String descripcion) {
