@@ -9,7 +9,7 @@ public class ClienteEntity {
     protected int edad;
     protected int diaNacimiento;
     protected int mesNacimiento;
-    protected int añoNacimiento;
+    protected int anhoNacimiento;
     protected String email;
     protected int telefono;
     protected String trabajo;
@@ -21,7 +21,7 @@ public class ClienteEntity {
     protected ArrayList<Integer> telefonos= new ArrayList<>();
 
     public ClienteEntity(int cedula, String nombre, String apellido, int edad, int diaNacimiento, int mesNacimiento,
-                         int añoNacimiento, String email, int telefono, String trabajo, String parroquiaDireccion,
+                         int anhoNacimiento, String email, int telefono, String trabajo, String parroquiaDireccion,
                          String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion) {
 
         this.cedula = cedula;
@@ -30,7 +30,7 @@ public class ClienteEntity {
         this.edad = edad;
         this.diaNacimiento = diaNacimiento;
         this.mesNacimiento = mesNacimiento;
-        this.añoNacimiento = añoNacimiento;
+        this.anhoNacimiento = anhoNacimiento;
         this.email = email;
         this.telefono = telefono;
         this.trabajo = trabajo;
@@ -61,8 +61,8 @@ public class ClienteEntity {
 
     public int getMesNacimiento() { return mesNacimiento; }
 
-    public int getAñoNacimiento() {
-        return añoNacimiento;
+    public int getAnhoNacimiento() {
+        return anhoNacimiento;
     }
 
     public String getEmail() {
@@ -119,8 +119,8 @@ public class ClienteEntity {
         this.mesNacimiento = mesNacimiento;
     }
 
-    public void setAñoNacimiento(int añoNacimiento) {
-        this.añoNacimiento = añoNacimiento;
+    public void setAnhoNacimiento(int anhoNacimiento) {
+        this.anhoNacimiento = anhoNacimiento;
     }
 
     public void setEmail(String email) {
