@@ -7,14 +7,14 @@ public class InformeEntity {
     private int numeroHorasInactivo;
     private int diaUltimoInicio;
     private int mesUltimoInicio;
-    private int añoUltimoInicio;
+    private int anhoUltimoInicio;
     private int diaUltimaSalida;
     private int mesUltimaSalida;
-    private int añoUltimaSalida;
+    private int anhoUltimaSalida;
 
     public InformeEntity(int numeroClientesAtendidos, int numeroCaptacionesCompletadas, int numeroHorasActivo,
-                         int numeroHorasInactivo, int diaUltimoInicio, int mesUltimoInicio, int añoUltimoInicio,
-                         int diaUltimaSalida, int mesUltimaSalida, int añoUltimaSalida) {
+                         int numeroHorasInactivo, int diaUltimoInicio, int mesUltimoInicio, int anhoUltimoInicio,
+                         int diaUltimaSalida, int mesUltimaSalida, int anhoUltimaSalida) {
 
         this.numeroClientesAtendidos = numeroClientesAtendidos;
         this.numeroCaptacionesCompletadas = numeroCaptacionesCompletadas;
@@ -22,10 +22,10 @@ public class InformeEntity {
         this.numeroHorasInactivo = numeroHorasInactivo;
         this.diaUltimoInicio = diaUltimoInicio;
         this.mesUltimoInicio = mesUltimoInicio;
-        this.añoUltimoInicio = añoUltimoInicio;
+        this.anhoUltimoInicio = anhoUltimoInicio;
         this.diaUltimaSalida = diaUltimaSalida;
         this.mesUltimaSalida = mesUltimaSalida;
-        this.añoUltimaSalida = añoUltimaSalida;
+        this.anhoUltimaSalida = anhoUltimaSalida;
     }
 
     public int getNumeroClientesAtendidos() {
@@ -52,8 +52,8 @@ public class InformeEntity {
         return mesUltimoInicio;
     }
 
-    public int getAñoUltimoInicio() {
-        return añoUltimoInicio;
+    public int getAnhoUltimoInicio() {
+        return anhoUltimoInicio;
     }
 
     public int getDiaUltimaSalida() {
@@ -64,8 +64,8 @@ public class InformeEntity {
         return mesUltimaSalida;
     }
 
-    public int getAñoUltimaSalida() {
-        return añoUltimaSalida;
+    public int getAnhoUltimaSalida() {
+        return anhoUltimaSalida;
     }
 
     public void setNumeroClientesAtendidos(int numeroClientesAtendidos) {
@@ -92,8 +92,8 @@ public class InformeEntity {
         this.mesUltimoInicio = mesUltimoInicio;
     }
 
-    public void setAñoUltimoInicio(int añoUltimoInicio) {
-        this.añoUltimoInicio = añoUltimoInicio;
+    public void setAnhoUltimoInicio(int anhoUltimoInicio) {
+        this.anhoUltimoInicio = anhoUltimoInicio;
     }
 
     public void setDiaUltimaSalida(int diaUltimaSalida) {
@@ -104,7 +104,7 @@ public class InformeEntity {
         this.mesUltimaSalida = mesUltimaSalida;
     }
 
-    public void setAñoUltimaSalida(int añoUltimaSalida) {
-        this.añoUltimaSalida = añoUltimaSalida;
+    public void setAnhoUltimaSalida(int anhoUltimaSalida) {
+        this.anhoUltimaSalida = anhoUltimaSalida;
     }
 }
