@@ -1,4 +1,8 @@
 import BBDD.Conection;
+import BBDD.DAOImplement.ClienteDAO;
+import BBDD.Fecha;
+import BBDD.ModelosBD.ClienteEntity;
+import BBDD.Telefono;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -6,6 +10,8 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class Main extends Application {
@@ -13,17 +19,11 @@ public class Main extends Application {
     public static void main(String args[]) throws IOException, ExecutionException, InterruptedException {
 
         try{
-            Conection db = new Conection();
-
-            // Create a Map to store the data we want to set
-            /*Map<String, Object> docData = new HashMap<>();
-            docData.put("name", "Los Angeles");
-            docData.put("state", "CA");
-            docData.put("country", "USA");*/
-
-            // Add a new document (asynchronously) in collection "cities" with id "LA"
-            //ApiFuture<WriteResult> future = db.getDatabase().collection("cities").document("LA").set(docData);
-
+            List<Telefono> tlf = new ArrayList<>();
+            tlf.add(new Telefono("0414-8911462"));
+            ClienteEntity cliente = new ClienteEntity("28240553","Tania","Riobueno",new Fecha(8,4,1999),"tanialita2308@gmail.com",tlf,"Estudiante","","","Bolivar","Puerto Ordaz","Villa Colombia");
+            ClienteDAO clienteD = new ClienteDAO();
+            clienteD.create(cliente);
         }catch (Exception e){
             System.out.println(e.getMessage());
             e.printStackTrace();

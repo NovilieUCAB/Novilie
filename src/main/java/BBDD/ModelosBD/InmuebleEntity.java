@@ -1,4 +1,4 @@
-package Backend;
+package BBDD.ModelosBD;
 
 public class InmuebleEntity {
     String numReferencia;
