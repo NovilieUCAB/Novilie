@@ -1,16 +1,16 @@
 package BBDD;
 
 public class InformeEntity {
-    int numeroClientesAtendidos;
-    int numeroCaptacionesCompletadas;
-    int numeroHorasActivo;
-    int numeroHorasInactivo;
-    int diaUltimoInicio;
-    int mesUltimoInicio;
-    int añoUltimoInicio;
-    int diaUltimaSalida;
-    int mesUltimaSalida;
-    int añoUltimaSalida;
+    private int numeroClientesAtendidos;
+    private int numeroCaptacionesCompletadas;
+    private int numeroHorasActivo;
+    private int numeroHorasInactivo;
+    private int diaUltimoInicio;
+    private int mesUltimoInicio;
+    private int añoUltimoInicio;
+    private int diaUltimaSalida;
+    private int mesUltimaSalida;
+    private int añoUltimaSalida;
 
     public InformeEntity(int numeroClientesAtendidos, int numeroCaptacionesCompletadas, int numeroHorasActivo,
                          int numeroHorasInactivo, int diaUltimoInicio, int mesUltimoInicio, int añoUltimoInicio,
