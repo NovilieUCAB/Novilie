@@ -3,22 +3,22 @@ package BBDD;
 import java.util.ArrayList;
 
 public class ClienteEntity {
-    int cedula;
-    String nombre;
-    String apellido;
-    int edad;
-    int diaNacimiento;
-    int mesNacimiento;
-    int añoNacimiento;
-    String email;
-    int telefono;
-    String trabajo;
-    String parroquiaDireccion;
-    String municipioDireccion;
-    String estadoDireccion;
-    String ciudadDireccion;
-    String direccion;
-    ArrayList<Integer> telefonos= new ArrayList<Integer>();
+    protected int cedula;
+    protected String nombre;
+    protected String apellido;
+    protected int edad;
+    protected int diaNacimiento;
+    protected int mesNacimiento;
+    protected int añoNacimiento;
+    protected String email;
+    protected int telefono;
+    protected String trabajo;
+    protected String parroquiaDireccion;
+    protected String municipioDireccion;
+    protected String estadoDireccion;
+    protected String ciudadDireccion;
+    protected String direccion;
+    protected ArrayList<Integer> telefonos= new ArrayList<>();
 
     public ClienteEntity(int cedula, String nombre, String apellido, int edad, int diaNacimiento, int mesNacimiento,
                          int añoNacimiento, String email, int telefono, String trabajo, String parroquiaDireccion,
