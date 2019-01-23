@@ -1,4 +1,6 @@
-package Backend;
+package BBDD;
+
+import java.util.ArrayList;
 
 public class ClienteEntity {
     int cedula;
@@ -16,7 +18,28 @@ public class ClienteEntity {
     String estadoDireccion;
     String ciudadDireccion;
     String direccion;
+    ArrayList<Integer> telefonos= new ArrayList<Integer>();
 
+    public ClienteEntity(int cedula, String nombre, String apellido, int edad, int diaNacimiento, int mesNacimiento,
+                         int añoNacimiento, String email, int telefono, String trabajo, String parroquiaDireccion,
+                         String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion) {
+
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.edad = edad;
+        this.diaNacimiento = diaNacimiento;
+        this.mesNacimiento = mesNacimiento;
+        this.añoNacimiento = añoNacimiento;
+        this.email = email;
+        this.telefono = telefono;
+        this.trabajo = trabajo;
+        this.parroquiaDireccion = parroquiaDireccion;
+        this.municipioDireccion = municipioDireccion;
+        this.estadoDireccion = estadoDireccion;
+        this.ciudadDireccion = ciudadDireccion;
+        this.direccion = direccion;
+    }
 
     public int getCedula() { return cedula; }
 
@@ -130,5 +153,13 @@ public class ClienteEntity {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public void addTelefono(int telefono) {
+        this.telefonos.add(telefono);
+    }
+
+    public void removeTelefono(int telefono) {
+        this.telefonos.remove(telefono);
     }
 }
