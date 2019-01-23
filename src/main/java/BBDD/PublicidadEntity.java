@@ -3,12 +3,12 @@ package BBDD;
 public class PublicidadEntity {
     private String urlBase;
     private String cuenta;
-    private String contraseña;
+    private String contrasenha;
 
-    public PublicidadEntity(String urlBase, String cuenta, String contraseña) {
+    public PublicidadEntity(String urlBase, String cuenta, String contrasenha) {
         this.urlBase = urlBase;
         this.cuenta = cuenta;
-        this.contraseña = contraseña;
+        this.contrasenha = contrasenha;
     }
 
     public String getUrlBase() {
@@ -19,8 +19,8 @@ public class PublicidadEntity {
         return cuenta;
     }
 
-    public String getContraseña() {
-        return contraseña;
+    public String getContrasenha() {
+        return contrasenha;
     }
 
     public void setUrlBase(String urlBase) {
@@ -31,7 +31,7 @@ public class PublicidadEntity {
         this.cuenta = cuenta;
     }
 
-    public void setContraseña(String contraseña) {
-        this.contraseña = contraseña;
+    public void setContrasenha(String contrasenha) {
+        this.contrasenha = contrasenha;
     }
 }
