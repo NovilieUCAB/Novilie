@@ -6,7 +6,7 @@ public class AsesorInmobiliarioEntity {
     private String apellido;
     private int diaNacimiento;
     private int mesNacimiento;
-    private int añoNacimiento;
+    private int anhoNacimiento;
     private String parroquiaDireccion;
     private String municipioDireccion;
     private String estadoDireccion;
@@ -15,14 +15,14 @@ public class AsesorInmobiliarioEntity {
     private String email;
 
     public AsesorInmobiliarioEntity(int cedula, String nombre, String apellido, int diaNacimiento, int mesNacimiento,
-                                    int añoNacimiento, String parroquiaDireccion, String municipioDireccion,
+                                    int anhoNacimiento, String parroquiaDireccion, String municipioDireccion,
                                     String estadoDireccion, String ciudadDireccion, String direccion, String email) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.diaNacimiento = diaNacimiento;
         this.mesNacimiento = mesNacimiento;
-        this.añoNacimiento = añoNacimiento;
+        this.anhoNacimiento = anhoNacimiento;
         this.parroquiaDireccion = parroquiaDireccion;
         this.municipioDireccion = municipioDireccion;
         this.estadoDireccion = estadoDireccion;
@@ -51,8 +51,8 @@ public class AsesorInmobiliarioEntity {
         return mesNacimiento;
     }
 
-    public int getAñoNacimiento() {
-        return añoNacimiento;
+    public int getAnhoNacimiento() {
+        return anhoNacimiento;
     }
 
     public String getParroquiaDireccion() {
@@ -99,8 +99,8 @@ public class AsesorInmobiliarioEntity {
         this.mesNacimiento = mesNacimiento;
     }
 
-    public void setAñoNacimiento(int añoNacimiento) {
-        this.añoNacimiento = añoNacimiento;
+    public void setAnhoNacimiento(int anhoNacimiento) {
+        this.anhoNacimiento = anhoNacimiento;
     }
 
     public void setParroquiaDireccion(String parroquiaDireccion) {
