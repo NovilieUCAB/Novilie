@@ -1,68 +1,71 @@
-package Backend;
+package BBDD;
 
 public class InmuebleEntity {
-    String numReferencia;
-    int estadoOperacion;
+    private String numReferencia;
+    private int estadoOperacion;
     // fotos
-    String documentacion;
-    String tipoPropiedad;
-    int precio;
-    int operacion;
-    String parroquiaDireccion;
-    String municipioDireccion;
-    String estadoDireccion;
-    String ciudadDireccion;
-    String direccion;
-    int metrosParcela;
-    int metrosConstruccion;
-    boolean ampliacion;
-    int metrosAmpliacion;
-    boolean disponibilidad;
-    boolean luminosidad;
-    int numBaños;
-    int numAseos;
-    int numHabitaciones;
-    boolean fachada;
-    boolean armariosEmpotrados;
-    int orientacion;
-    boolean salonIndependiente;
-    int metrosSalon;
-    boolean estado;
-    boolean urbanizacion;
-    boolean amueblado;
-    boolean balcon;
-    boolean galeria;
-    int añoConstruccion;
-    boolean chimenea;
-    boolean terraza;
-    String tipoTecho;
-    boolean comedor;
-    boolean cocina;
-    boolean ascensor;
-    boolean huardilla;
-    boolean garaje;
-    boolean planos;
-    boolean sotano;
-    boolean patio;
-    String tipoSuelo;
-    boolean calefaccion;
-    boolean aguaCaliente;
-    boolean aireAcondicionado;
-    boolean trastero;
-    boolean porteria;
-    boolean zonaServicio;
-    boolean zonaDeportivo;
-    boolean jardin;
-    boolean vigilancia;
+    private String documentacion;
+    private String tipoPropiedad;
+    private int precio;
+    private boolean operacion;
+    private String parroquiaDireccion;
+    private String municipioDireccion;
+    private String estadoDireccion;
+    private String ciudadDireccion;
+    private String direccion;
+    private int metrosParcela;
+    private int metrosConstruccion;
+    private boolean ampliacion;
+    private int metrosAmpliacion;
+    private boolean disponibilidad;
+    private boolean luminosidad;
+    private int numBaños;
+    private int numAseos;
+    private int numHabitaciones;
+    private boolean fachada;
+    private boolean armariosEmpotrados;
+    private int orientacion;
+    private boolean salonIndependiente;
+    private int metrosSalon;
+    private boolean estado;
+    private boolean urbanizacion;
+    private boolean amueblado;
+    private boolean balcon;
+    private boolean galeria;
+    private int añoConstruccion;
+    private boolean chimenea;
+    private boolean terraza;
+    private String tipoTecho;
+    private boolean comedor;
+    private boolean cocina;
+    private boolean ascensor;
+    private boolean huardilla;
+    private boolean garaje;
+    private boolean planos;
+    private boolean sotano;
+    private boolean patio;
+    private String tipoSuelo;
+    private boolean calefaccion;
+    private boolean aguaCaliente;
+    private boolean aireAcondicionado;
+    private boolean trastero;
+    private boolean porteria;
+    private boolean zonaServicio;
+    private boolean zonaDeportivo;
+    private boolean jardin;
+    private boolean vigilancia;
 
-    public InmuebleEntity(String numReferencia, int estadoOperacion, String documentacion, String tipoPropiedad, int precio, int operacion, String parroquiaDireccion,
-                          String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion, int metrosParcela, int metrosConstruccion,
-                          boolean ampliacion, int metrosAmpliacion, boolean disponibilidad, boolean luminosidad, int numBaños, int numAseos, int numHabitaciones,
-                          boolean fachada, boolean armariosEmpotrados, int orientacion, boolean salonIndependiente, int metrosSalon, boolean estado, boolean urbanizacion,
-                          boolean amueblado, boolean balcon, boolean galeria, int añoConstruccion, boolean chimenea, boolean terraza, String tipoTecho, boolean comedor,
-                          boolean cocina, boolean ascensor, boolean huardilla, boolean garaje, boolean planos, boolean sotano, boolean patio, String tipoSuelo,
-                          boolean calefaccion, boolean aguaCaliente, boolean aireAcondicionado, boolean trastero, boolean porteria, boolean zonaServicio, boolean zonaDeportivo,
-                          boolean jardin, boolean vigilancia) {
+    public InmuebleEntity(String numReferencia, int estadoOperacion, String documentacion, String tipoPropiedad, int precio,
+                          boolean operacion, String parroquiaDireccion, String municipioDireccion, String estadoDireccion,
+                          String ciudadDireccion, String direccion, int metrosParcela, int metrosConstruccion,
+                          boolean ampliacion, int metrosAmpliacion, boolean disponibilidad, boolean luminosidad, int numBaños,
+                          int numAseos, int numHabitaciones, boolean fachada, boolean armariosEmpotrados, int orientacion,
+                          boolean salonIndependiente, int metrosSalon, boolean estado, boolean urbanizacion, boolean amueblado,
+                          boolean balcon, boolean galeria, int añoConstruccion, boolean chimenea, boolean terraza,
+                          String tipoTecho, boolean comedor, boolean cocina, boolean ascensor, boolean huardilla,
+                          boolean garaje, boolean planos, boolean sotano, boolean patio, String tipoSuelo, boolean calefaccion,
+                          boolean aguaCaliente, boolean aireAcondicionado, boolean trastero, boolean porteria,
+                          boolean zonaServicio, boolean zonaDeportivo, boolean jardin, boolean vigilancia) {
 
         this.numReferencia = numReferencia;
         this.estadoOperacion = estadoOperacion;
@@ -138,10 +141,7 @@ public class InmuebleEntity {
         return precio;
     }
 
-    public int getOperacion() {
-        return operacion;
-    }
-
+    public boolean isOperacion() { return operacion; }
     public String getParroquiaDireccion() {
         return parroquiaDireccion;
     }
@@ -338,9 +338,7 @@ public class InmuebleEntity {
         this.documentacion = documentacion;
     }
 
-    public void setOperacion(int operacion) {
-        this.operacion = operacion;
-    }
+    public void setOperacion(boolean operacion) { this.operacion = operacion; }
 
     public void setParroquiaDireccion(String parroquiaDireccion) {
         this.parroquiaDireccion = parroquiaDireccion;
