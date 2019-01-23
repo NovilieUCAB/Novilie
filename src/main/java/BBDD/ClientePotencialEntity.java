@@ -1,7 +1,7 @@
 package BBDD;
 
 public class ClientePotencialEntity extends ClienteEntity{
-    boolean operacion;
+    private boolean operacion;
 
     public ClientePotencialEntity(int cedula, String nombre, String apellido, int edad, int diaNacimiento, int mesNacimiento,
                                   int añoNacimiento, String email, int telefono, String trabajo, String parroquiaDireccion,
