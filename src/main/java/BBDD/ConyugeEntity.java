@@ -3,17 +3,17 @@ package BBDD;
 import java.util.ArrayList;
 
 public class ConyugeEntity {
-    int cedula;
-    String nombre;
-    String apellido;
-    int edad;
-    int diaNacimiento;
-    int mesNacimiento;
-    int añoNacimiento;
-    String email;
-    int telefono;
-    String trabajo;
-    ArrayList<Integer> telefonos = new ArrayList<Integer>();
+    private int cedula;
+    private String nombre;
+    private String apellido;
+    private int edad;
+    private int diaNacimiento;
+    private int mesNacimiento;
+    private int añoNacimiento;
+    private String email;
+    private int telefono;
+    private String trabajo;
+    private ArrayList<Integer> telefonos = new ArrayList<>();
 
     public ConyugeEntity(int cedula, String nombre, String apellido, int edad, int dia, int mes, int año, String email,
                          int telefono, String trabajo) {
