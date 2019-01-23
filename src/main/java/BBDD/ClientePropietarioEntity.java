@@ -3,7 +3,7 @@ package BBDD;
 import java.util.ArrayList;
 
 public class ClientePropietarioEntity extends ClienteEntity {
-    ArrayList<InmuebleEntity> inmuebles = new ArrayList<InmuebleEntity>();
+    private ArrayList<InmuebleEntity> inmuebles = new ArrayList<>();
 
 
     public ClientePropietarioEntity(int cedula, String nombre, String apellido, int edad, int diaNacimiento, int mesNacimiento,
