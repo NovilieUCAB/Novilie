@@ -1,5 +1,6 @@
 package BBDD.ModelosBD;
 
+import BBDD.Fecha;
 import BBDD.Telefono;
 
 import java.util.List;
@@ -9,21 +10,17 @@ public class ConyugeEntity {
     String nombre;
     String apellido;
     int edad;
-    int diaNacimiento;
-    int mesNacimiento;
-    int añoNacimiento;
+    Fecha fechaNacimiento;
     String email;
     List<Telefono> telefono;
     String trabajo;
 
-    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, int dia, int mes, int año, String email, String trabajo) {
+    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, Fecha fechaNacimiento, String email, String trabajo) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-        this.añoNacimiento=año;
-        this.mesNacimiento=mes;
-        this.diaNacimiento=dia;
+        this.fechaNacimiento = fechaNacimiento;
         this.email = email;
         this.trabajo = trabajo;
     }
@@ -44,11 +41,10 @@ public class ConyugeEntity {
         return edad;
     }
 
-    public int getDiaNacimiento() { return diaNacimiento; }
+    public Fecha getFechaNacimiento() {
+        return fechaNacimiento;
+    }
 
-    public int getMesNacimiento() { return mesNacimiento; }
-
-    public int getAñoNacimiento() { return añoNacimiento; }
 
     public String getEmail() {
         return email;
@@ -74,11 +70,9 @@ public class ConyugeEntity {
         this.edad = edad;
     }
 
-    public void setDiaNacimiento(int diaNacimiento) { this.diaNacimiento = diaNacimiento; }
-
-    public void setMesNacimiento(int mesNacimiento) { this.mesNacimiento = mesNacimiento; }
-
-    public void setAñoNacimiento(int añoNacimiento) { this.añoNacimiento = añoNacimiento; }
+    public void setFechaNacimiento(Fecha fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
 
     public void setEmail(String email) {
         this.email = email;
@@ -90,6 +84,20 @@ public class ConyugeEntity {
 
     public void setTrabajo(String trabajo) {
         this.trabajo = trabajo;
+    }
+
+    @Override
+    public String toString() {
+        return "ConyugeEntity{" +
+                "cedula=" + cedula +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", fechaNacimiento=" + fechaNacimiento.getDia() +"/" + fechaNacimiento.getMes() + "/" + fechaNacimiento.getAnio() + "/" +
+                ", email='" + email + '\'' +
+                ", telefono=" + telefono.get(0) +
+                ", trabajo='" + trabajo + '\'' +
+                '}';
     }
 }
 
