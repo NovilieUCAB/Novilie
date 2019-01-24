@@ -24,6 +24,8 @@ public class ClienteEntity {
     String ciudadDireccion;
     String direccion;
 
+    public ClienteEntity(){}
+
     public ClienteEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String email,
                          String trabajo, String estadoDireccion, String ciudadDireccion, String direccion) {
         this.cedula = cedula;
@@ -176,5 +178,24 @@ public class ClienteEntity {
 
         Period periodo = Period.between(fechaNac, ahora);
         return periodo.getYears();
+    }
+
+    @Override
+    public String toString() {
+        return "ClienteEntity{" +
+                "cedula='" + cedula + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                ", edad=" + edad +
+                ", fechaNacimiento=" + fechaNacimiento.getDia() +"/" + fechaNacimiento.getMes() + "/" + fechaNacimiento.getAnio() +
+                ", email='" + email + '\'' +
+                ", telefono=" + telefono.get(0).getTelefono() +
+                ", trabajo='" + trabajo + '\'' +
+                ", parroquiaDireccion='" + parroquiaDireccion + '\'' +
+                ", municipioDireccion='" + municipioDireccion + '\'' +
+                ", estadoDireccion='" + estadoDireccion + '\'' +
+                ", ciudadDireccion='" + ciudadDireccion + '\'' +
+                ", direccion='" + direccion + '\'' +
+                '}';
     }
 }
