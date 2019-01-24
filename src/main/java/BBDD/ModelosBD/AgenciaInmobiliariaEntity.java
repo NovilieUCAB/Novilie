@@ -1,17 +1,24 @@
-package BBDD;
+package BBDD.ModelosBD;
+
+import javafx.scene.image.Image;
+
+import java.io.File;
 
 public class AgenciaInmobiliariaEntity {
     private String nombreAgencia;
     private String lema;
-    // logo
-    private  String urlPaginaWeb;
+    private Image logo;
+    private String urlPaginaWeb;
     private String parroquiaDireccion;
     private String municipioDireccion;
     private String estadoDireccion;
     private String ciudadDireccion;
     private String direccion;
 
-    public AgenciaInmobiliariaEntity(String nombreAgencia, String lema, String urlPaginaWeb, String parroquiaDireccion, String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion) {
+    public AgenciaInmobiliariaEntity() {
+    }
+
+    public AgenciaInmobiliariaEntity(String nombreAgencia, String lema, String urlPaginaWeb, String parroquiaDireccion, String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion, Image logo) {
         this.nombreAgencia = nombreAgencia;
         this.lema = lema;
         this.urlPaginaWeb = urlPaginaWeb;
@@ -20,6 +27,11 @@ public class AgenciaInmobiliariaEntity {
         this.estadoDireccion = estadoDireccion;
         this.ciudadDireccion = ciudadDireccion;
         this.direccion = direccion;
+        this.logo = logo;
+    }
+
+    public Image getLogo() {
+        return logo;
     }
 
     public String getNombreAgencia() {
@@ -84,5 +96,23 @@ public class AgenciaInmobiliariaEntity {
 
     public void setDireccion(String direccion) {
         this.direccion = direccion;
+    }
+
+    public void setLogo(Image logo) {
+        this.logo = logo;
+    }
+
+    @Override
+    public String toString() {
+        return "AgenciaInmobiliariaEntity{" +
+                "nombreAgencia='" + nombreAgencia + '\'' +
+                ", lema='" + lema + '\'' +
+                ", urlPaginaWeb='" + urlPaginaWeb + '\'' +
+                ", parroquiaDireccion='" + parroquiaDireccion + '\'' +
+                ", municipioDireccion='" + municipioDireccion + '\'' +
+                ", estadoDireccion='" + estadoDireccion + '\'' +
+                ", ciudadDireccion='" + ciudadDireccion + '\'' +
+                ", direccion='" + direccion + '\'' +
+                '}';
     }
 }
