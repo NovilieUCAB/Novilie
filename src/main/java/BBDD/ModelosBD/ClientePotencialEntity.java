@@ -8,6 +8,9 @@ import java.util.List;
 public class ClientePotencialEntity extends ClienteEntity{
     private String operacion;
 
+    public ClientePotencialEntity() {
+    }
+
     public ClientePotencialEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String email,
                                   String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String operacion){
         super(cedula,nombre,apellido,fechaNacimiento,email,trabajo,estadoDireccion,ciudadDireccion,direccion);
@@ -37,5 +40,12 @@ public class ClientePotencialEntity extends ClienteEntity{
 
     public void setOperacion(String operacion) {
         this.operacion = operacion;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString()+ "\n" + "ClientePotencialEntity{" +
+                "operacion='" + operacion + '\'' +
+                '}';
     }
 }
