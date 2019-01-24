@@ -23,7 +23,7 @@ public class InmuebleEntity {
     int metrosAmpliacion;
     boolean disponibilidad;
     boolean luminosidad;
-    int numBaños;
+    int numBanhos;
     int numAseos;
     int numHabitaciones;
     boolean fachada;
@@ -36,7 +36,7 @@ public class InmuebleEntity {
     boolean amueblado;
     boolean balcon;
     boolean galeria;
-    int añoConstruccion;
+    int anhoConstruccion;
     boolean chimenea;
     boolean terraza;
     String tipoTecho;
@@ -58,6 +58,7 @@ public class InmuebleEntity {
     boolean zonaDeportivo;
     boolean jardin;
     boolean vigilancia;
+    String cedulaPropietario;
 
     public InmuebleEntity() {
     }
@@ -66,14 +67,14 @@ public class InmuebleEntity {
                           String tipoPropiedad, int precio, int operacion, String parroquiaDireccion,
                           String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion,
                           int metrosParcela, int metrosConstruccion, boolean ampliacion, int metrosAmpliacion,
-                          boolean disponibilidad, boolean luminosidad, int numBaños, int numAseos, int numHabitaciones,
+                          boolean disponibilidad, boolean luminosidad, int numBanhos, int numAseos, int numHabitaciones,
                           boolean fachada, boolean armariosEmpotrados, String orientacion, boolean salonIndependiente,
                           int metrosSalon, boolean estado, boolean urbanizacion, boolean amueblado, boolean balcon,
-                          boolean galeria, int añoConstruccion, boolean chimenea, boolean terraza, String tipoTecho,
+                          boolean galeria, int anhoConstruccion, boolean chimenea, boolean terraza, String tipoTecho,
                           boolean comedor, boolean cocina, boolean ascensor, boolean huardilla, boolean garaje,
                           boolean planos, boolean sotano, boolean patio, String tipoSuelo, boolean calefaccion,
                           boolean aguaCaliente, boolean aireAcondicionado, boolean trastero, boolean porteria,
-                          boolean zonaServicio, boolean zonaDeportivo, boolean jardin, boolean vigilancia) {
+                          boolean zonaServicio, boolean zonaDeportivo, boolean jardin, boolean vigilancia, String cedulaPropietario) {
         this.numReferencia = numReferencia;
         this.estadoOperacion = estadoOperacion;
         this.fotos = fotos;
@@ -92,7 +93,7 @@ public class InmuebleEntity {
         this.metrosAmpliacion = metrosAmpliacion;
         this.disponibilidad = disponibilidad;
         this.luminosidad = luminosidad;
-        this.numBaños = numBaños;
+        this.numBanhos = numBanhos;
         this.numAseos = numAseos;
         this.numHabitaciones = numHabitaciones;
         this.fachada = fachada;
@@ -105,7 +106,7 @@ public class InmuebleEntity {
         this.amueblado = amueblado;
         this.balcon = balcon;
         this.galeria = galeria;
-        this.añoConstruccion = añoConstruccion;
+        this.anhoConstruccion = anhoConstruccion;
         this.chimenea = chimenea;
         this.terraza = terraza;
         this.tipoTecho = tipoTecho;
@@ -127,6 +128,7 @@ public class InmuebleEntity {
         this.zonaDeportivo = zonaDeportivo;
         this.jardin = jardin;
         this.vigilancia = vigilancia;
+        this.cedulaPropietario = cedulaPropietario;
     }
 
     public String getNumReferencia() {
@@ -197,8 +199,8 @@ public class InmuebleEntity {
         return luminosidad;
     }
 
-    public int getNumBaños() {
-        return numBaños;
+    public int getNumBanhos() {
+        return numBanhos;
     }
 
     public int getNumAseos() {
@@ -249,8 +251,8 @@ public class InmuebleEntity {
         return galeria;
     }
 
-    public int getAñoConstruccion() {
-        return añoConstruccion;
+    public int getAnhoConstruccion() {
+        return anhoConstruccion;
     }
 
     public boolean isChimenea() {
@@ -397,8 +399,8 @@ public class InmuebleEntity {
         this.luminosidad = luminosidad;
     }
 
-    public void setNumBaños(int numBaños) {
-        this.numBaños = numBaños;
+    public void setNumBanhos(int numBanhos) {
+        this.numBanhos = numBanhos;
     }
 
     public void setNumAseos(int numAseos) {
@@ -441,8 +443,8 @@ public class InmuebleEntity {
         this.galeria = galeria;
     }
 
-    public void setAñoConstruccion(int añoConstruccion) {
-        this.añoConstruccion = añoConstruccion;
+    public void setAnhoConstruccion(int anhoConstruccion) {
+        this.anhoConstruccion = anhoConstruccion;
     }
 
     public void setChimenea(boolean chimenea) {

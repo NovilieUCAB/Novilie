@@ -12,15 +12,15 @@ public class ClientePotencialEntity extends ClienteEntity{
     }
 
     public ClientePotencialEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String email,
-                                  String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String operacion){
-        super(cedula,nombre,apellido,fechaNacimiento,email,trabajo,estadoDireccion,ciudadDireccion,direccion);
+                                  String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String operacion,String cedulaConyuge, String cedulaAsesorEncargado){
+        super(cedula,nombre,apellido,fechaNacimiento,email,trabajo,estadoDireccion,ciudadDireccion,direccion, cedulaConyuge, cedulaAsesorEncargado);
         this.operacion = operacion;
     }
 
     public ClientePotencialEntity(String cedula, String nombre, String apellido,Fecha fechaNacimiento, String email,
     List<Telefono> telefono, String trabajo, String parroquiaDireccion, String municipioDireccion,
-    String estadoDireccion, String ciudadDireccion, String direccion, String operacion){
-        super(cedula,nombre,apellido,fechaNacimiento,email,telefono,trabajo,parroquiaDireccion,municipioDireccion,estadoDireccion,ciudadDireccion,direccion);
+    String estadoDireccion, String ciudadDireccion, String direccion, String operacion,String cedulaConyuge, String cedulaAsesorEncargado){
+        super(cedula,nombre,apellido,fechaNacimiento,email,telefono,trabajo,parroquiaDireccion,municipioDireccion,estadoDireccion,ciudadDireccion,direccion,cedulaConyuge,cedulaAsesorEncargado);
         this.operacion = operacion;
     }
 
