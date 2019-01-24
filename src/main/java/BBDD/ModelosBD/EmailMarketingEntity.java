@@ -1,4 +1,4 @@
-package BBDD;
+package BBDD.ModelosBD;
 
 import java.util.ArrayList;
 
@@ -17,4 +17,13 @@ public class EmailMarketingEntity {
         this.listaInteresados.remove(interesado);
     }
 
+    public EmailMarketingEntity() {
+    }
+
+    @Override
+    public String toString() {
+        return "EmailMarketingEntity{" +
+                "listaInteresados=" + listaInteresados.toString() +
+                '}';
+    }
 }

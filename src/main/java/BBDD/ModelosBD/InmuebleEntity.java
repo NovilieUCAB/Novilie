@@ -1,9 +1,13 @@
 package BBDD.ModelosBD;
 
+import javafx.scene.image.Image;
+
+import java.util.ArrayList;
+
 public class InmuebleEntity {
     String numReferencia;
     int estadoOperacion;
-    // fotos
+    ArrayList<Image> fotos;
     String documentacion;
     String tipoPropiedad;
     int precio;
@@ -24,7 +28,7 @@ public class InmuebleEntity {
     int numHabitaciones;
     boolean fachada;
     boolean armariosEmpotrados;
-    int orientacion;
+    String orientacion;
     boolean salonIndependiente;
     int metrosSalon;
     boolean estado;
@@ -55,17 +59,21 @@ public class InmuebleEntity {
     boolean jardin;
     boolean vigilancia;
 
-    public InmuebleEntity(String numReferencia, int estadoOperacion, String documentacion, String tipoPropiedad, int precio, int operacion, String parroquiaDireccion,
-                          String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion, int metrosParcela, int metrosConstruccion,
-                          boolean ampliacion, int metrosAmpliacion, boolean disponibilidad, boolean luminosidad, int numBaños, int numAseos, int numHabitaciones,
-                          boolean fachada, boolean armariosEmpotrados, int orientacion, boolean salonIndependiente, int metrosSalon, boolean estado, boolean urbanizacion,
-                          boolean amueblado, boolean balcon, boolean galeria, int añoConstruccion, boolean chimenea, boolean terraza, String tipoTecho, boolean comedor,
-                          boolean cocina, boolean ascensor, boolean huardilla, boolean garaje, boolean planos, boolean sotano, boolean patio, String tipoSuelo,
-                          boolean calefaccion, boolean aguaCaliente, boolean aireAcondicionado, boolean trastero, boolean porteria, boolean zonaServicio, boolean zonaDeportivo,
-                          boolean jardin, boolean vigilancia) {
-
+    public InmuebleEntity(String numReferencia, int estadoOperacion, ArrayList<Image> fotos, String documentacion,
+                          String tipoPropiedad, int precio, int operacion, String parroquiaDireccion,
+                          String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion,
+                          int metrosParcela, int metrosConstruccion, boolean ampliacion, int metrosAmpliacion,
+                          boolean disponibilidad, boolean luminosidad, int numBaños, int numAseos, int numHabitaciones,
+                          boolean fachada, boolean armariosEmpotrados, String orientacion, boolean salonIndependiente,
+                          int metrosSalon, boolean estado, boolean urbanizacion, boolean amueblado, boolean balcon,
+                          boolean galeria, int añoConstruccion, boolean chimenea, boolean terraza, String tipoTecho,
+                          boolean comedor, boolean cocina, boolean ascensor, boolean huardilla, boolean garaje,
+                          boolean planos, boolean sotano, boolean patio, String tipoSuelo, boolean calefaccion,
+                          boolean aguaCaliente, boolean aireAcondicionado, boolean trastero, boolean porteria,
+                          boolean zonaServicio, boolean zonaDeportivo, boolean jardin, boolean vigilancia) {
         this.numReferencia = numReferencia;
         this.estadoOperacion = estadoOperacion;
+        this.fotos = fotos;
         this.documentacion = documentacion;
         this.tipoPropiedad = tipoPropiedad;
         this.precio = precio;
@@ -206,7 +214,7 @@ public class InmuebleEntity {
         return armariosEmpotrados;
     }
 
-    public int getOrientacion() {
+    public String getOrientacion() {
         return orientacion;
     }
 
@@ -406,7 +414,7 @@ public class InmuebleEntity {
         this.armariosEmpotrados = armariosEmpotrados;
     }
 
-    public void setOrientacion(int orientacion) {
+    public void setOrientacion(String orientacion) {
         this.orientacion = orientacion;
     }
 
