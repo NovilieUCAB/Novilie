@@ -3,17 +3,17 @@ package BBDD.ModelosBD;
 import java.util.ArrayList;
 
 public class EmailMarketingEntity {
-    private ArrayList<ClienteEntity> listaInteresados = new ArrayList<>();
+    private ArrayList<String> listaInteresados = new ArrayList<>();
 
-    public ArrayList<ClienteEntity> getListaInteresados() {
+    public ArrayList<String> getListaInteresados() {
         return listaInteresados;
     }
 
-    public void addInteresado(ClienteEntity interesado) {
+    public void addInteresado(String interesado) {
         this.listaInteresados.add(interesado);
     }
 
-    public void removeInteresado(ClienteEntity interesado) {
+    public void removeInteresado(String interesado) {
         this.listaInteresados.remove(interesado);
     }
 

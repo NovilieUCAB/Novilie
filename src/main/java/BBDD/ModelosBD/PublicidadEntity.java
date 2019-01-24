@@ -5,6 +5,9 @@ public class PublicidadEntity {
     private String cuenta;
     private String contrasenha;
 
+    public PublicidadEntity() {
+    }
+
     public PublicidadEntity(String urlBase, String cuenta, String contrasenha) {
         this.urlBase = urlBase;
         this.cuenta = cuenta;

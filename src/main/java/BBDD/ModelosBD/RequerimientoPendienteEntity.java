@@ -2,12 +2,15 @@ package BBDD.ModelosBD;
 
 public class RequerimientoPendienteEntity {
     private String numReferencia;
-    private int cedulaCliente;
+    private String cedulaCliente;
     private int telefono;
     private boolean operacion;
     private boolean atendido;
 
-    public RequerimientoPendienteEntity(String numReferencia, int cedulaCliente, int telefono, boolean operacion,
+    public RequerimientoPendienteEntity() {
+    }
+
+    public RequerimientoPendienteEntity(String numReferencia, String cedulaCliente, int telefono, boolean operacion,
                                         boolean atendido) {
         this.numReferencia = numReferencia;
         this.cedulaCliente = cedulaCliente;
@@ -20,7 +23,7 @@ public class RequerimientoPendienteEntity {
         return numReferencia;
     }
 
-    public int getCedulaCliente() {
+    public String getCedulaCliente() {
         return cedulaCliente;
     }
 
@@ -40,7 +43,7 @@ public class RequerimientoPendienteEntity {
         this.numReferencia = numReferencia;
     }
 
-    public void setCedulaCliente(int cedulaCliente) {
+    public void setCedulaCliente(String cedulaCliente) {
         this.cedulaCliente = cedulaCliente;
     }
 

@@ -1,7 +1,7 @@
 package BBDD.ModelosBD;
 
 public class RecordatorioEntity {
-    private int cedulaDestinatario;
+    private String cedulaDestinatario;
     private String titulo;
     private int minutoreacion;
     private int horaCreacion;
@@ -9,10 +9,11 @@ public class RecordatorioEntity {
     private int mesCreacion;
     private int anhoCreacion;
     private String descripcion;
-    //lista ReferenciasAdjuntas
 
+    public RecordatorioEntity() {
+    }
 
-    public RecordatorioEntity(int cedulaDestinatario, String titulo, int minutoreacion, int horaCreacion, int diaCreacion,
+    public RecordatorioEntity(String cedulaDestinatario, String titulo, int minutoreacion, int horaCreacion, int diaCreacion,
                               int mesCreacion, int anhoCreacion, String descripcion) {
         this.cedulaDestinatario = cedulaDestinatario;
         this.titulo = titulo;
@@ -24,7 +25,7 @@ public class RecordatorioEntity {
         this.descripcion = descripcion;
     }
 
-    public int getCedulaDestinatario() {
+    public String getCedulaDestinatario() {
         return cedulaDestinatario;
     }
 
@@ -56,7 +57,7 @@ public class RecordatorioEntity {
         return descripcion;
     }
 
-    public void setCedulaDestinatario(int cedulaDestinatario) {
+    public void setCedulaDestinatario(String cedulaDestinatario) {
         this.cedulaDestinatario = cedulaDestinatario;
     }
 

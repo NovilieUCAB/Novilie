@@ -8,6 +8,9 @@ public class UsuarioSistemaEntity {
     private String contrasenha;
     private String email;
 
+    public UsuarioSistemaEntity() {
+    }
+
     public UsuarioSistemaEntity(String nombre, String apellido, String nombreUsuario, int nivelPermiso,
                                 String contrasenha, String email) {
 

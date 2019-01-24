@@ -6,7 +6,7 @@ import BBDD.Telefono;
 import java.util.List;
 
 public class ConyugeEntity {
-    int cedula;
+    String cedula;
     String nombre;
     String apellido;
     int edad;
@@ -15,17 +15,17 @@ public class ConyugeEntity {
     List<Telefono> telefono;
     String trabajo;
 
-    public ConyugeEntity(int cedula, String nombre, String apellido, int edad, Fecha fechaNacimiento, String email, String trabajo) {
+    public ConyugeEntity(String cedula, String nombre, String apellido, int edad, Fecha fechaNacimiento, String email, String trabajo) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
+        this.edad = ClienteEntity.calculateAge(fechaNacimiento);
         this.fechaNacimiento = fechaNacimiento;
         this.email = email;
         this.trabajo = trabajo;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
@@ -56,7 +56,7 @@ public class ConyugeEntity {
 
     public String getTrabajo() { return trabajo; }
 
-    public void setCedula(int cedula) { this.cedula = cedula; }
+    public void setCedula(String cedula) { this.cedula = cedula; }
 
     public void setNombre(String nombre) {
         this.nombre = nombre;

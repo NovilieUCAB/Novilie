@@ -23,11 +23,12 @@ public class ClienteEntity {
     String estadoDireccion;
     String ciudadDireccion;
     String direccion;
+    String cedulaConyuge;
 
     public ClienteEntity(){}
 
     public ClienteEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String email,
-                         String trabajo, String estadoDireccion, String ciudadDireccion, String direccion) {
+                         String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String cedulaConyuge) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -38,11 +39,12 @@ public class ClienteEntity {
         this.ciudadDireccion = ciudadDireccion;
         this.direccion = direccion;
         this.edad = calculateAge(fechaNacimiento);
+        this.cedulaConyuge = cedulaConyuge;
     }
 
     public ClienteEntity(String cedula, String nombre, String apellido,Fecha fechaNacimiento, String email,
                          List<Telefono> telefono, String trabajo, String parroquiaDireccion, String municipioDireccion,
-                         String estadoDireccion, String ciudadDireccion, String direccion) {
+                         String estadoDireccion, String ciudadDireccion, String direccion, String cedulaConyuge) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -56,6 +58,7 @@ public class ClienteEntity {
         this.estadoDireccion = estadoDireccion;
         this.ciudadDireccion = ciudadDireccion;
         this.direccion = direccion;
+        this.cedulaConyuge = cedulaConyuge;
     }
 
     public String getCedula() { return cedula; }
@@ -163,7 +166,7 @@ public class ClienteEntity {
      * @param fechaNacimiento instancia de la clase Fecha
      * @return numero que representa la edad
      */
-    int calculateAge(Fecha fechaNacimiento){
+    public static int calculateAge(Fecha fechaNacimiento){
         DateTimeFormatter fmt = DateTimeFormatter.ofPattern("d/M/yyyy");
         String s = "";
         if(fechaNacimiento.getDia()<10){

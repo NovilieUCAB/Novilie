@@ -59,6 +59,9 @@ public class InmuebleEntity {
     boolean jardin;
     boolean vigilancia;
 
+    public InmuebleEntity() {
+    }
+
     public InmuebleEntity(String numReferencia, int estadoOperacion, ArrayList<Image> fotos, String documentacion,
                           String tipoPropiedad, int precio, int operacion, String parroquiaDireccion,
                           String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion,
