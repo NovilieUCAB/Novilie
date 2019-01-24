@@ -1,4 +1,4 @@
-package BBDD;
+package BBDD.ModelosBD;
 
 public class AsesorInmobiliarioEntity {
     private int cedula;
