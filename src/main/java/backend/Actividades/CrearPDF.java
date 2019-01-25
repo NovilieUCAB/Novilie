@@ -19,7 +19,7 @@ public class CrearPDF {
     
     private static final String FILE = "c:/temp/informe.pdf";
     private static final Font catFont = new Font(Font.FontFamily.TIMES_ROMAN, 18,Font.BOLD);
-    private static final Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12,Font.NORMAL, BaseColor.BLUE);
+    private static final Font redFont = new Font(Font.FontFamily.TIMES_ROMAN, 12,Font.NORMAL, BaseColor.RED);
     private static final Font subFont = new Font(Font.FontFamily.TIMES_ROMAN, 16,Font.BOLD);
 
     public static void main(String[] args) {
