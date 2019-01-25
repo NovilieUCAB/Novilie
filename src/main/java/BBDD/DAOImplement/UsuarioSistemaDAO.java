@@ -31,7 +31,7 @@ public class UsuarioSistemaDAO implements IDAO<UsuarioSistemaEntity> {
         List<UsuarioSistemaEntity>existingDocuments = new ArrayList<>();
         ApiFuture<QuerySnapshot> future = dbstore.collection(collection).get();
         List<QueryDocumentSnapshot> documentlist = future.get().getDocuments();
-        
+
         for(QueryDocumentSnapshot document : documentlist){
             existingDocuments.add(document.toObject(UsuarioSistemaEntity.class));
         }
