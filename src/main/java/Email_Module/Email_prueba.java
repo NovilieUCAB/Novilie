@@ -14,7 +14,7 @@ public class Email_prueba {
 
 
     public static void main(String[] args) {
-    String destinatario =  "novillieprueba@gmail.com"; //A quien le quieres escribir.
+    String destinatario =  "mauricio1999morales@gmail.com"; //A quien le quieres escribir.
     String asunto = "Correo de prueba enviado desde Java";
     String cuerpo = "Esta es una prueba de correo...";
 
