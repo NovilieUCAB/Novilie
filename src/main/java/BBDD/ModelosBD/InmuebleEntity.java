@@ -3,6 +3,7 @@ package BBDD.ModelosBD;
 import javafx.scene.image.Image;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class InmuebleEntity {
     String numReferencia;
@@ -58,7 +59,7 @@ public class InmuebleEntity {
     boolean zonaDeportivo;
     boolean jardin;
     boolean vigilancia;
-    String cedulaPropietario;
+    List<String> cedulaPropietario = new ArrayList<>();
 
     public InmuebleEntity() {
     }
@@ -75,7 +76,7 @@ public class InmuebleEntity {
                           boolean planos, boolean sotano, boolean patio, String tipoSuelo, boolean calefaccion,
                           boolean aguaCaliente, boolean aireAcondicionado, boolean trastero, boolean porteria,
                           boolean zonaServicio, boolean zonaDeportivo, boolean jardin, boolean vigilancia,
-                          String cedulaPropietario) {
+                          List<String> cedulaPropietario) {
         this.numReferencia = numReferencia;
         this.estadoOperacion = estadoOperacion;
         this.fotos = fotos;
@@ -556,11 +557,11 @@ public class InmuebleEntity {
         this.vigilancia = vigilancia;
     }
 
-    public String getCedulaPropietario() {
+    public List<String> getCedulaPropietario() {
         return cedulaPropietario;
     }
 
-    public void setCedulaPropietario(String cedulaPropietario) {
+    public void setCedulaPropietario(List<String> cedulaPropietario) {
         this.cedulaPropietario = cedulaPropietario;
     }
 }
