@@ -1,47 +1,39 @@
-package BBDD;
+package BBDD.ModelosBD;
 
-import java.util.ArrayList;
+public class AsesorInmobiliarioEntity {
+    private int cedula;
+    private String nombre;
+    private String apellido;
+    private int diaNacimiento;
+    private int mesNacimiento;
+    private int anhoNacimiento;
+    private String parroquiaDireccion;
+    private String municipioDireccion;
+    private String estadoDireccion;
+    private String ciudadDireccion;
+    private String direccion;
+    private String email;
 
-public class ClienteEntity {
-    protected int cedula;
-    protected String nombre;
-    protected String apellido;
-    protected int edad;
-    protected int diaNacimiento;
-    protected int mesNacimiento;
-    protected int anhoNacimiento;
-    protected String email;
-    protected int telefono;
-    protected String trabajo;
-    protected String parroquiaDireccion;
-    protected String municipioDireccion;
-    protected String estadoDireccion;
-    protected String ciudadDireccion;
-    protected String direccion;
-    protected ArrayList<Integer> telefonos= new ArrayList<>();
-
-    public ClienteEntity(int cedula, String nombre, String apellido, int edad, int diaNacimiento, int mesNacimiento,
-                         int anhoNacimiento, String email, int telefono, String trabajo, String parroquiaDireccion,
-                         String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion) {
-
+    public AsesorInmobiliarioEntity(int cedula, String nombre, String apellido, int diaNacimiento, int mesNacimiento,
+                                    int anhoNacimiento, String parroquiaDireccion, String municipioDireccion,
+                                    String estadoDireccion, String ciudadDireccion, String direccion, String email) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.edad = edad;
         this.diaNacimiento = diaNacimiento;
         this.mesNacimiento = mesNacimiento;
         this.anhoNacimiento = anhoNacimiento;
-        this.email = email;
-        this.telefono = telefono;
-        this.trabajo = trabajo;
         this.parroquiaDireccion = parroquiaDireccion;
         this.municipioDireccion = municipioDireccion;
         this.estadoDireccion = estadoDireccion;
         this.ciudadDireccion = ciudadDireccion;
         this.direccion = direccion;
+        this.email = email;
     }
 
-    public int getCedula() { return cedula; }
+    public int getCedula() {
+        return cedula;
+    }
 
     public String getNombre() {
         return nombre;
@@ -51,28 +43,16 @@ public class ClienteEntity {
         return apellido;
     }
 
-    public int getEdad() {
-        return edad;
-    }
-
     public int getDiaNacimiento() {
         return diaNacimiento;
     }
 
-    public int getMesNacimiento() { return mesNacimiento; }
+    public int getMesNacimiento() {
+        return mesNacimiento;
+    }
 
     public int getAnhoNacimiento() {
         return anhoNacimiento;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public int getTelefono() { return telefono; }
-
-    public String getTrabajo() {
-        return trabajo;
     }
 
     public String getParroquiaDireccion() {
@@ -95,6 +75,10 @@ public class ClienteEntity {
         return direccion;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
     public void setCedula(int cedula) {
         this.cedula = cedula;
     }
@@ -107,10 +91,6 @@ public class ClienteEntity {
         this.apellido = apellido;
     }
 
-    public void setEdad(int edad) {
-        this.edad = edad;
-    }
-
     public void setDiaNacimiento(int diaNacimiento) {
         this.diaNacimiento = diaNacimiento;
     }
@@ -121,18 +101,6 @@ public class ClienteEntity {
 
     public void setAnhoNacimiento(int anhoNacimiento) {
         this.anhoNacimiento = anhoNacimiento;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setTelefono(int telefono) {
-        this.telefono = telefono;
-    }
-
-    public void setTrabajo(String trabajo) {
-        this.trabajo = trabajo;
     }
 
     public void setParroquiaDireccion(String parroquiaDireccion) {
@@ -155,11 +123,9 @@ public class ClienteEntity {
         this.direccion = direccion;
     }
 
-    public void addTelefono(int telefono) {
-        this.telefonos.add(telefono);
-    }
-
-    public void removeTelefono(int telefono) {
-        this.telefonos.remove(telefono);
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
+
+
