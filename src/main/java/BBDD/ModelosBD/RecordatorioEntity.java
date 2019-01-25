@@ -1,27 +1,26 @@
 package BBDD.ModelosBD;
 
+import BBDD.Fecha;
+
+import java.util.ArrayList;
+
 public class RecordatorioEntity {
     private String cedulaDestinatario;
     private String titulo;
     private int minutoreacion;
     private int horaCreacion;
-    private int diaCreacion;
-    private int mesCreacion;
-    private int anhoCreacion;
+    private Fecha fechaCreacion;
     private String descripcion;
 
     public RecordatorioEntity() {
     }
 
-    public RecordatorioEntity(String cedulaDestinatario, String titulo, int minutoreacion, int horaCreacion, int diaCreacion,
-                              int mesCreacion, int anhoCreacion, String descripcion) {
+    public RecordatorioEntity(String cedulaDestinatario, String titulo, int minutoreacion, int horaCreacion, Fecha fechaCreacion, String descripcion) {
         this.cedulaDestinatario = cedulaDestinatario;
         this.titulo = titulo;
         this.minutoreacion = minutoreacion;
         this.horaCreacion = horaCreacion;
-        this.diaCreacion = diaCreacion;
-        this.mesCreacion = mesCreacion;
-        this.anhoCreacion = anhoCreacion;
+        this.fechaCreacion = fechaCreacion;
         this.descripcion = descripcion;
     }
 
@@ -41,16 +40,8 @@ public class RecordatorioEntity {
         return horaCreacion;
     }
 
-    public int getDiaCreacion() {
-        return diaCreacion;
-    }
-
-    public int getMesCreacion() {
-        return mesCreacion;
-    }
-
-    public int getAnhoCreacion() {
-        return anhoCreacion;
+    public Fecha getFechaCreacion() {
+        return fechaCreacion;
     }
 
     public String getDescripcion() {
@@ -73,16 +64,8 @@ public class RecordatorioEntity {
         this.horaCreacion = horaCreacion;
     }
 
-    public void setDiaCreacion(int diaCreacion) {
-        this.diaCreacion = diaCreacion;
-    }
-
-    public void setMesCreacion(int mesCreacion) {
-        this.mesCreacion = mesCreacion;
-    }
-
-    public void setAnhoCreacion(int anhoCreacion) {
-        this.anhoCreacion = anhoCreacion;
+    public void setFechaCreacion(Fecha fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
     }
 
     public void setDescripcion(String descripcion) {

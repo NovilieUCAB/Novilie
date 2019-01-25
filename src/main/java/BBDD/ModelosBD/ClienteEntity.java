@@ -10,10 +10,10 @@ import java.util.List;
 
 public class ClienteEntity {
 
-    String cedula;
-    String nombre;
-    String apellido;
-    int edad;
+    protected String cedula;
+    protected String nombre;
+    protected String apellido;
+    protected int edad;
     Fecha fechaNacimiento;
     String email;
     List<Telefono> telefono;
@@ -24,11 +24,12 @@ public class ClienteEntity {
     String ciudadDireccion;
     String direccion;
     String cedulaConyuge;
+    String cedulaAsesorEncargado;
 
     public ClienteEntity(){}
 
     public ClienteEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String email,
-                         String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String cedulaConyuge) {
+                         String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String cedulaConyuge,String cedulaAsesorEncargado) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -40,11 +41,12 @@ public class ClienteEntity {
         this.direccion = direccion;
         this.edad = calculateAge(fechaNacimiento);
         this.cedulaConyuge = cedulaConyuge;
+        this.cedulaAsesorEncargado = cedulaAsesorEncargado;
     }
 
     public ClienteEntity(String cedula, String nombre, String apellido,Fecha fechaNacimiento, String email,
                          List<Telefono> telefono, String trabajo, String parroquiaDireccion, String municipioDireccion,
-                         String estadoDireccion, String ciudadDireccion, String direccion, String cedulaConyuge) {
+                         String estadoDireccion, String ciudadDireccion, String direccion, String cedulaConyuge, String cedulaAsesorEncargado) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
@@ -59,6 +61,7 @@ public class ClienteEntity {
         this.ciudadDireccion = ciudadDireccion;
         this.direccion = direccion;
         this.cedulaConyuge = cedulaConyuge;
+        this.cedulaAsesorEncargado = cedulaAsesorEncargado;
     }
 
     public String getCedula() { return cedula; }

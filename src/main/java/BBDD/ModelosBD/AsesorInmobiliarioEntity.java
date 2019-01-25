@@ -1,12 +1,12 @@
 package BBDD.ModelosBD;
 
+import BBDD.Fecha;
+
 public class AsesorInmobiliarioEntity {
-    private int cedula;
+    private String cedula;
     private String nombre;
     private String apellido;
-    private int diaNacimiento;
-    private int mesNacimiento;
-    private int anhoNacimiento;
+    Fecha fechaNacimiento;
     private String parroquiaDireccion;
     private String municipioDireccion;
     private String estadoDireccion;
@@ -14,15 +14,16 @@ public class AsesorInmobiliarioEntity {
     private String direccion;
     private String email;
 
-    public AsesorInmobiliarioEntity(int cedula, String nombre, String apellido, int diaNacimiento, int mesNacimiento,
-                                    int anhoNacimiento, String parroquiaDireccion, String municipioDireccion,
+    public AsesorInmobiliarioEntity(){
+
+    }
+
+    public AsesorInmobiliarioEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String parroquiaDireccion, String municipioDireccion,
                                     String estadoDireccion, String ciudadDireccion, String direccion, String email) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.diaNacimiento = diaNacimiento;
-        this.mesNacimiento = mesNacimiento;
-        this.anhoNacimiento = anhoNacimiento;
+        this.fechaNacimiento = fechaNacimiento;
         this.parroquiaDireccion = parroquiaDireccion;
         this.municipioDireccion = municipioDireccion;
         this.estadoDireccion = estadoDireccion;
@@ -31,7 +32,7 @@ public class AsesorInmobiliarioEntity {
         this.email = email;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return cedula;
     }
 
@@ -43,16 +44,8 @@ public class AsesorInmobiliarioEntity {
         return apellido;
     }
 
-    public int getDiaNacimiento() {
-        return diaNacimiento;
-    }
-
-    public int getMesNacimiento() {
-        return mesNacimiento;
-    }
-
-    public int getAnhoNacimiento() {
-        return anhoNacimiento;
+    public Fecha getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
     public String getParroquiaDireccion() {
@@ -79,7 +72,7 @@ public class AsesorInmobiliarioEntity {
         return email;
     }
 
-    public void setCedula(int cedula) {
+    public void setCedula(String cedula) {
         this.cedula = cedula;
     }
 
@@ -91,16 +84,8 @@ public class AsesorInmobiliarioEntity {
         this.apellido = apellido;
     }
 
-    public void setDiaNacimiento(int diaNacimiento) {
-        this.diaNacimiento = diaNacimiento;
-    }
-
-    public void setMesNacimiento(int mesNacimiento) {
-        this.mesNacimiento = mesNacimiento;
-    }
-
-    public void setAnhoNacimiento(int anhoNacimiento) {
-        this.anhoNacimiento = anhoNacimiento;
+    public void setFechaNacimiento(Fecha fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
     public void setParroquiaDireccion(String parroquiaDireccion) {

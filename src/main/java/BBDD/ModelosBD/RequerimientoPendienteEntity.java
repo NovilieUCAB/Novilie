@@ -1,16 +1,18 @@
 package BBDD.ModelosBD;
 
+import BBDD.Telefono;
+
 public class RequerimientoPendienteEntity {
     private String numReferencia;
     private String cedulaCliente;
-    private int telefono;
-    private boolean operacion;
+    private Telefono telefono;
+    private String operacion;
     private boolean atendido;
 
     public RequerimientoPendienteEntity() {
     }
 
-    public RequerimientoPendienteEntity(String numReferencia, String cedulaCliente, int telefono, boolean operacion,
+    public RequerimientoPendienteEntity(String numReferencia, String cedulaCliente, Telefono telefono, String operacion,
                                         boolean atendido) {
         this.numReferencia = numReferencia;
         this.cedulaCliente = cedulaCliente;
@@ -27,11 +29,11 @@ public class RequerimientoPendienteEntity {
         return cedulaCliente;
     }
 
-    public int getTelefono() {
+    public Telefono getTelefono() {
         return telefono;
     }
 
-    public boolean isOperacion() {
+    public String isOperacion() {
         return operacion;
     }
 
@@ -47,11 +49,11 @@ public class RequerimientoPendienteEntity {
         this.cedulaCliente = cedulaCliente;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(Telefono telefono) {
         this.telefono = telefono;
     }
 
-    public void setOperacion(boolean operacion) {
+    public void setOperacion(String operacion) {
         this.operacion = operacion;
     }
 

@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
-public class ClientePropietarioDAO implements IDAO<ClientePropietarioEntity> {
+public class PropietarioDAO implements IDAO<ClientePropietarioEntity> {
     private static Conection db;
 
     private static Conection getDb() {
@@ -21,7 +21,7 @@ public class ClientePropietarioDAO implements IDAO<ClientePropietarioEntity> {
     }
 
     private static void setDb(Conection db) {
-        ClientePropietarioDAO.db = db;
+        PropietarioDAO.db = db;
     }
 
     static {
@@ -37,7 +37,7 @@ public class ClientePropietarioDAO implements IDAO<ClientePropietarioEntity> {
 
         try{
 
-            ApiFuture<WriteResult> future = getDb().getDatabase().collection("ClientesPropietarios").document(objeto.getCedula()).set(objeto);
+            ApiFuture<WriteResult> future = getDb().getDatabase().collection("Propietarios").document(objeto.getCedula()).set(objeto);
             System.out.println(future.get().getUpdateTime());
             create = true;
         } catch (Exception e) {
@@ -51,7 +51,7 @@ public class ClientePropietarioDAO implements IDAO<ClientePropietarioEntity> {
 
         List<ClientePropietarioEntity> clientes = new ArrayList<>();
 
-        ApiFuture<QuerySnapshot> future = getDb().getDatabase().collection("ClientesPropietarios").get();
+        ApiFuture<QuerySnapshot> future = getDb().getDatabase().collection("Propietarios").get();
 
         List<QueryDocumentSnapshot> documents = future.get().getDocuments();
 
@@ -66,7 +66,7 @@ public class ClientePropietarioDAO implements IDAO<ClientePropietarioEntity> {
         boolean update = false;
 
         try{
-            ApiFuture<WriteResult> future = getDb().getDatabase().collection("ClientesPropietarios").document(objeto.getCedula()).set(objeto);
+            ApiFuture<WriteResult> future = getDb().getDatabase().collection("Propietarios").document(objeto.getCedula()).set(objeto);
             update = true;
         } catch (Exception e) {
             e.printStackTrace();
@@ -77,7 +77,7 @@ public class ClientePropietarioDAO implements IDAO<ClientePropietarioEntity> {
     @Override
     public boolean delete(ClientePropietarioEntity objeto) {
 
-        getDb().getDatabase().collection("ClientesPropietarios").document(objeto.getCedula()).delete();
+        getDb().getDatabase().collection("Propietarios").document(objeto.getCedula()).delete();
 
         return true;
     }
