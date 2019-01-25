@@ -1,13 +1,11 @@
 package BBDD.DAOImplement;
 
 import BBDD.Conection;
+import BBDD.ModelosBD.AsesorInmobiliarioEntity;
 import BBDD.ModelosBD.ClienteEntity;
 import BBDD.ModelosBD.ClientePotencialEntity;
 import com.google.api.core.ApiFuture;
-import com.google.cloud.firestore.DocumentSnapshot;
-import com.google.cloud.firestore.QueryDocumentSnapshot;
-import com.google.cloud.firestore.QuerySnapshot;
-import com.google.cloud.firestore.WriteResult;
+import com.google.cloud.firestore.*;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,72 +14,45 @@ import java.util.concurrent.ExecutionException;
 
 public class ClientePotencialDAO implements IDAO<ClientePotencialEntity> {
 
-    private static Conection db;
+    final String collection= "Clientes Potenciales";
+    Firestore dbstore = Conection.database;
 
-    private static Conection getDb() {
-        return db;
-    }
-
-    private static void setDb(Conection db) {
-        ClientePotencialDAO.db = db;
-    }
-
-    static {
-        try {
-            setDb(new Conection());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
     @Override
     public boolean create(ClientePotencialEntity objeto) {
-        boolean create = false;
-
-        try{
-
-            ApiFuture<WriteResult> future = getDb().getDatabase().collection("ClientesPotenciales").document(objeto.getCedula()).set(objeto);
-            System.out.println(future.get().getUpdateTime());
-            create = true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return create;
+        boolean created = false;
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getCedula()).set(objeto);
+        created = true ;
+        return created;
     }
 
     @Override
     public List<ClientePotencialEntity> read() throws ExecutionException, InterruptedException {
 
-        List<ClientePotencialEntity> clientes = new ArrayList<>();
+        List<ClientePotencialEntity> existingDocuments = new ArrayList<>();
+        ApiFuture<QuerySnapshot> future = dbstore.collection(collection).get();
+        List<QueryDocumentSnapshot> documentlist = future.get().getDocuments();
+        if(!documentlist.isEmpty())
+            for(QueryDocumentSnapshot document: documentlist){
+                existingDocuments.add(document.toObject(ClientePotencialEntity.class));
+            }
 
-        ApiFuture<QuerySnapshot> future = getDb().getDatabase().collection("ClientesPotenciales").get();
-
-        List<QueryDocumentSnapshot> documents = future.get().getDocuments();
-
-        for (DocumentSnapshot document : documents) {
-            clientes.add(document.toObject(ClientePotencialEntity.class));
-        }
-        return clientes;
+        return existingDocuments;
     }
 
     @Override
     public boolean update(ClientePotencialEntity objeto) {
-        boolean update = false;
-
-        try{
-            ApiFuture<WriteResult> future = getDb().getDatabase().collection("ClientesPotenciales").document(objeto.getCedula()).set(objeto);
-            update = true;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return update;
+        boolean updated = false;
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getCedula()).set(objeto);
+        updated = true;
+        return false;
     }
 
     @Override
     public boolean delete(ClientePotencialEntity objeto) {
-
-        getDb().getDatabase().collection("ClientesPotenciales").document(objeto.getCedula()).delete();
-
-        return true;
+        boolean deleted = false;
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getCedula()).delete();
+        deleted = true;
+        return false;
     }
 
 

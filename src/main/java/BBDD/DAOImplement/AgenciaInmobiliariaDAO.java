@@ -3,78 +3,51 @@ package BBDD.DAOImplement;
 import BBDD.Conection;
 import BBDD.ModelosBD.AgenciaInmobiliariaEntity;
 import com.google.api.core.ApiFuture;
-import com.google.cloud.firestore.DocumentSnapshot;
-import com.google.cloud.firestore.QueryDocumentSnapshot;
-import com.google.cloud.firestore.QuerySnapshot;
-import com.google.cloud.firestore.WriteResult;
+import com.google.cloud.firestore.*;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public class AgenciaInmobiliariaDAO implements IDAO<AgenciaInmobiliariaEntity> {
 
-    private static Conection db;
-
-    private static Conection getDb() {
-        return db;
-    }
-
-    private static void setDb(Conection db) {
-        AgenciaInmobiliariaDAO.db = db;
-    }
-
-    static {
-        try {
-            setDb(new Conection());
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+    final String collection= "Agencia";
+    Firestore dbstore = Conection.database;
 
     @Override
     public boolean create(AgenciaInmobiliariaEntity objeto) {
-        boolean create = false;
-        try{
-            ApiFuture<WriteResult> future = getDb().getDatabase().collection("Agencia").document(objeto.getNombreAgencia()).set(objeto);
-            System.out.println(future.get().getUpdateTime());
-            create = true;
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        return create;
+        boolean created = false;
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getNombreAgencia()).set(objeto);
+        created = true ;
+        return created;
     }
 
     @Override
     public List<AgenciaInmobiliariaEntity> read() throws ExecutionException, InterruptedException {
-        List<AgenciaInmobiliariaEntity> agencias = new ArrayList<>();
+        List<AgenciaInmobiliariaEntity> existingDocuments = new ArrayList<>();
+        ApiFuture<QuerySnapshot> future = dbstore.collection(collection).get();
+        List<QueryDocumentSnapshot> documentlist = future.get().getDocuments();
+        if(!documentlist.isEmpty())
+            for(QueryDocumentSnapshot document: documentlist){
+                existingDocuments.add(document.toObject(AgenciaInmobiliariaEntity.class));
+            }
 
-        ApiFuture<QuerySnapshot> future = getDb().getDatabase().collection("Agencia").get();
-
-        List<QueryDocumentSnapshot> documents = future.get().getDocuments();
-
-        for (DocumentSnapshot document : documents) {
-            agencias.add(document.toObject(AgenciaInmobiliariaEntity.class));
-        }
-        return agencias;
+        return existingDocuments;
     }
 
     @Override
     public boolean update(AgenciaInmobiliariaEntity objeto) {
-        boolean update = false;
-        try{
-            ApiFuture<WriteResult> future = getDb().getDatabase().collection("Agencia").document(objeto.getNombreAgencia()).set(objeto);
-            update = true;
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-        return update;
+        boolean updated = false;
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getNombreAgencia()).set(objeto);
+        updated = true;
+        return false;
     }
 
     @Override
     public boolean delete(AgenciaInmobiliariaEntity objeto) {
-        ApiFuture<WriteResult> future = getDb().getDatabase().collection("Agencia").document(objeto.getNombreAgencia()).delete();
-        return true;
+        boolean deleted = false;
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getNombreAgencia()).delete();
+        deleted = true;
+        return false;
     }
 }
