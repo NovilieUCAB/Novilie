@@ -2,6 +2,7 @@ package BBDD.ModelosBD;
 
 import javafx.scene.image.Image;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,7 +10,7 @@ public class InmuebleEntity {
     String numReferencia;
     int estadoOperacion;
     ArrayList<Image> fotos;
-    String documentacion;
+    List<File> documentacion;
     String tipoPropiedad;
     int precio;
     String operacion;
@@ -64,7 +65,7 @@ public class InmuebleEntity {
     public InmuebleEntity() {
     }
 
-    public InmuebleEntity(String numReferencia, int estadoOperacion, ArrayList<Image> fotos, String documentacion,
+    public InmuebleEntity(String numReferencia, int estadoOperacion, ArrayList<Image> fotos, List<File> documentacion,
                           String tipoPropiedad, int precio, String operacion, String parroquiaDireccion,
                           String municipioDireccion, String estadoDireccion, String ciudadDireccion, String direccion,
                           int metrosParcela, int metrosConstruccion, boolean ampliacion, int metrosAmpliacion,
@@ -157,11 +158,11 @@ public class InmuebleEntity {
         this.fotos = fotos;
     }
 
-    public String getDocumentacion() {
+    public List<File> getDocumentacion() {
         return documentacion;
     }
 
-    public void setDocumentacion(String documentacion) {
+    public void setDocumentacion(List<File> documentacion) {
         this.documentacion = documentacion;
     }
 
