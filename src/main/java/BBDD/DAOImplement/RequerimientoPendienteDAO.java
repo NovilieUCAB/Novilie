@@ -21,7 +21,7 @@ public class RequerimientoPendienteDAO implements IDAO<RequerimientoPendienteEnt
     @Override
     public boolean create(RequerimientoPendienteEntity objeto) {
         boolean created = false;
-        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getNumReferencia()).set(objeto);
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getNumReferencia()+objeto.getCedulaCliente()).set(objeto);
         created = true;
         return created;
     }
@@ -42,7 +42,8 @@ public class RequerimientoPendienteDAO implements IDAO<RequerimientoPendienteEnt
     @Override
     public boolean update(RequerimientoPendienteEntity objeto) {
         boolean updated = false;
-        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getNumReferencia()).set(objeto);
+        String title = objeto.getNumReferencia()+objeto.getCedulaCliente();
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(title).set(objeto);
         updated = true;
         return updated;
     }
@@ -50,7 +51,8 @@ public class RequerimientoPendienteDAO implements IDAO<RequerimientoPendienteEnt
     @Override
     public boolean delete(RequerimientoPendienteEntity objeto) {
         boolean deleted = false;
-        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getNumReferencia()).delete();
+        String title = objeto.getNumReferencia()+objeto.getCedulaCliente();
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(title).delete();
         deleted = true;
         return deleted;
     }

@@ -22,7 +22,7 @@ public class PublicidadDAO implements IDAO<PublicidadEntity> {
     @Override
     public boolean create(PublicidadEntity objeto) {
         boolean created = false;
-        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getReferenciaInmueble()).set(objeto);
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getUrlBase()+objeto.getReferenciaInmueble()).set(objeto);
         created = true;
         return created;
     }
@@ -43,7 +43,8 @@ public class PublicidadDAO implements IDAO<PublicidadEntity> {
     @Override
     public boolean update(PublicidadEntity objeto) {
         boolean updated = false;
-        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getReferenciaInmueble()).set(objeto);
+        String title = objeto.getUrlBase()+objeto.getReferenciaInmueble();
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(title).set(objeto);
         updated = true;
         return updated;
     }
@@ -51,7 +52,7 @@ public class PublicidadDAO implements IDAO<PublicidadEntity> {
     @Override
     public boolean delete(PublicidadEntity objeto) {
         boolean deleted = false;
-        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getReferenciaInmueble()).delete();
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getUrlBase()+objeto.getReferenciaInmueble()).delete();
         deleted = true;
         return deleted;
     }
