@@ -15,6 +15,8 @@ public class ConyugeEntity {
     List<Telefono> telefono;
     String trabajo;
 
+    public ConyugeEntity(){ }
+
     public ConyugeEntity(String cedula, String nombre, String apellido, int edad, Fecha fechaNacimiento, String email, String trabajo) {
         this.cedula = cedula;
         this.nombre = nombre;

@@ -1,5 +1,7 @@
 package BBDD.ModelosBD;
 
+import BBDD.ModelosBD.ClienteEntity;
+
 import java.util.ArrayList;
 
 public class EmailMarketingEntity {

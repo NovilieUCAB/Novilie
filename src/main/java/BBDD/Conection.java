@@ -13,7 +13,7 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 
 public class Conection {
-    private Firestore database;
+    public static Firestore database;
 
     public Conection() throws IOException {
         FileInputStream serviceAccount =

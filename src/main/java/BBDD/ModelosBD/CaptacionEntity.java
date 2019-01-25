@@ -9,6 +9,8 @@ public class CaptacionEntity {
     private HashMap<String,Boolean> criteriosAceptacion = new HashMap<>();
     private int comisionInmueble;
 
+    public CaptacionEntity(){}
+
     public CaptacionEntity(String referenciaInmueble, HashMap<String, Integer> cedulaAsesorComision, HashMap<String, Boolean> criteriosAceptacion, int comisionInmueble) {
         this.referenciaInmueble = referenciaInmueble;
         this.cedulaAsesorComision = cedulaAsesorComision;

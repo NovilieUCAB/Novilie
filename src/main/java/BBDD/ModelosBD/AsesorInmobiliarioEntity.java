@@ -14,6 +14,10 @@ public class AsesorInmobiliarioEntity {
     private String direccion;
     private String email;
 
+    public AsesorInmobiliarioEntity(){
+
+    }
+
     public AsesorInmobiliarioEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String parroquiaDireccion, String municipioDireccion,
                                     String estadoDireccion, String ciudadDireccion, String direccion, String email) {
         this.cedula = cedula;
