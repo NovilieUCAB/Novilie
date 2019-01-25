@@ -20,11 +20,12 @@ public class ConyugeDAO implements IDAO<ConyugeEntity>{
     * */
 
     Firestore dbstore = Conection.database;
+    private final String collection = "Conyuges";
 
     @Override
     public boolean create(ConyugeEntity objeto) {
         boolean create = false;
-        ApiFuture<WriteResult> future = dbstore.collection("Conyuges").document(objeto.getCedula()).set(objeto);
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getCedula()).set(objeto);
         create = true;
 
         return create;
@@ -33,7 +34,7 @@ public class ConyugeDAO implements IDAO<ConyugeEntity>{
     @Override
     public List<ConyugeEntity> read() {
         List<ConyugeEntity> existingDocuments = new ArrayList<>();
-        ApiFuture<QuerySnapshot> future = dbstore.collection("Conyuges").get();
+        ApiFuture<QuerySnapshot> future = dbstore.collection(collection).get();
         List<QueryDocumentSnapshot> documentlist = null;
         try {
             documentlist = future.get().getDocuments();
@@ -55,7 +56,7 @@ public class ConyugeDAO implements IDAO<ConyugeEntity>{
     @Override
     public boolean update(ConyugeEntity objeto) {
         boolean updated = false;
-        ApiFuture<WriteResult> future = dbstore.collection("Conyuges").document(objeto.getCedula()).set(objeto);
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getCedula()).set(objeto);
         updated = true;
         return updated;
     }
@@ -63,7 +64,7 @@ public class ConyugeDAO implements IDAO<ConyugeEntity>{
     @Override
     public boolean delete(ConyugeEntity objeto) {
         boolean delete = false;
-        ApiFuture<WriteResult> future = dbstore.collection("Conyuges").document(objeto.getCedula()).delete();
+        ApiFuture<WriteResult> future = dbstore.collection(collection).document(objeto.getCedula()).delete();
         delete = true;
 
         return delete;
@@ -71,7 +72,7 @@ public class ConyugeDAO implements IDAO<ConyugeEntity>{
 
     public ConyugeEntity retrieve(String cedula){
         ConyugeEntity retConyuge =null;
-        DocumentReference docRef = dbstore.collection("Conyuges").document(cedula);
+        DocumentReference docRef = dbstore.collection(collection).document(cedula);
         ApiFuture<DocumentSnapshot> future = docRef.get();
         try {
             DocumentSnapshot doc = future.get();
