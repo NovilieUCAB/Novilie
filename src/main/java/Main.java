@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,10 +17,13 @@ import java.util.concurrent.ExecutionException;
 
 public class Main extends Application {
 
-    public static void main(String args[]) throws IOException, ExecutionException, InterruptedException {
+    public static void main(String args[]) throws IOException {
 
+        FileInputStream serviceAccount =
+                new FileInputStream("novilie-firebase-adminsdk-od77w-74a1f74d4a.json");
         try{
             Conection  cnt = new Conection();
+        FirebaseApp.initializeApp(options);
 
 
             List<PublicidadEntity> lt =null ;
@@ -38,9 +42,12 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+
+        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
+        primaryStage.setTitle("Novilie");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.centerOnScreen();
+        primaryStage.setScene(new Scene(root, 420, 420));
         primaryStage.show();
     }
 }

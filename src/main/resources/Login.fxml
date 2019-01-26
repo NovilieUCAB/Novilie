@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="424.0" prefWidth="400.0" style="-fx-background-color: FFFFFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginController">
+    <children>
+        <ImageView fitHeight="75.0" fitWidth="70.0" layoutX="166.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../../images/Logo2.png" />
+            </image>
+        </ImageView>
+        <JFXTextField fx:id="Correo" accessibleHelp="Correo" focusColor="WHITE" layoutX="86.0" layoutY="195.0" mouseTransparent="true" onMouseClicked="#loginAction" prefHeight="27.0" prefWidth="230.0" style="-fx-border-color: #449DD1; -fx-background-color: FFFFFF; -fx-border-radius: 5;" unFocusColor="WHITE" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="84.0">
+            <opaqueInsets>
+                <Insets bottom="4.0" left="4.0" right="4.0" />
+            </opaqueInsets>
+        </JFXTextField>
+        <Label layoutX="141.0" layoutY="83.0" prefHeight="75.0" prefWidth="125.0" text="Novilie" textFill="#1d2951">
+            <font>
+                <Font name="Microsoft PhagsPa" size="37.0" />
+            </font>
+        </Label>
+        <Label layoutX="88.0" layoutY="175.0" onMouseClicked="#loginAction" text="Correo Electronico" textFill="#1d2951">
+            <font>
+                <Font name="Microsoft PhagsPa" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="88.0" layoutY="234.0" onMouseClicked="#loginAction" text="Contraseña" textFill="#1d2951">
+            <font>
+                <Font name="Microsoft PhagsPa" size="14.0" />
+            </font>
+        </Label>
+        <JFXPasswordField fx:id="Contraseña" focusColor="WHITE" layoutX="86.0" layoutY="254.0" onMouseClicked="#loginAction" prefHeight="27.0" prefWidth="230.0" style="-fx-background-color: FFFFF; -fx-border-color: #449DD1; -fx-border-radius: 5;" unFocusColor="WHITE" AnchorPane.leftAnchor="86.0" AnchorPane.rightAnchor="84.0" />
+        <JFXButton fx:id="Iniciar_Sesion" buttonType="RAISED" layoutX="85.0" layoutY="329.0" onMouseClicked="#loginAction" prefHeight="38.0" prefWidth="230.0" style="-fx-background-color: #449DD1; -fx-background-radius: 50;" text="Iniciar Sesion" textFill="WHITE" textOverrun="CLIP" AnchorPane.topAnchor="329.0">
+            <font>
+                <Font size="17.0" />
+            </font>
+        </JFXButton>
+    </children>
+</AnchorPane>

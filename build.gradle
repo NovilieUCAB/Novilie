@@ -15,5 +15,5 @@ dependencies {
     compile 'com.google.firebase:firebase-admin:6.5.0'
     compile group: 'com.itextpdf', name: 'itextpdf', version: '5.5.10'
     compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.0'
-    
+    compile group: 'com.jfoenix', name: 'jfoenix', version: '8.0.4'
 }
