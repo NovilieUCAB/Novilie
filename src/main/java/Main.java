@@ -26,13 +26,6 @@ public class Main extends Application {
 //        FirebaseApp.initializeApp(options);
 
 
-            List<PublicidadEntity> lt =null ;
-
-            for(PublicidadEntity doc :lt){
-                System.out.println(doc.getUrlBase());
-            }
-
-
         }catch (Exception e){
             System.out.println(e.getMessage());
             e.printStackTrace();
