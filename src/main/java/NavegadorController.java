@@ -15,7 +15,7 @@ public class NavegadorController implements Initializable {
     @FXML
     private AnchorPane holderPane;
 
-    AnchorPane propiedad;
+    AnchorPane ventana;
 
 
     @Override
@@ -38,20 +38,30 @@ public class NavegadorController implements Initializable {
     }
 
     private void createPage(){
-
         try {
-            propiedad = FXMLLoader.load(getClass().getResource("Propiedades.fxml"));
-            setNode(propiedad);
+            ventana = FXMLLoader.load(getClass().getResource("Propiedades.fxml"));
+            setNode(ventana);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
 
+    @FXML
+    public void asesores(){
+        try {
+            ventana = FXMLLoader.load(getClass().getResource("Asesores.fxml"));
+            setNode(ventana);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-
-//    @FXML
-//    public void loginAction(ActionEvent e){
-//        System.out.println("Hola");
-//    }
-
+    public void propiedades(){
+        try {
+            ventana = FXMLLoader.load(getClass().getResource("Propiedades.fxml"));
+            setNode(ventana);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
