@@ -13,6 +13,7 @@ public class ClienteEntity {
     protected String cedula;
     protected String nombre;
     protected String apellido;
+    Fecha fechaAgregado;
     protected int edad;
     Fecha fechaNacimiento;
     String email;
@@ -28,11 +29,23 @@ public class ClienteEntity {
 
     public ClienteEntity(){}
 
-    public ClienteEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String email,
-                         String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String cedulaConyuge,String cedulaAsesorEncargado) {
+    public ClienteEntity(String cedula, String nombre, String apellido, Fecha fechaAgregado, Fecha fechaNacimiento, String email,
+                         String cedulaAsesorEncargado) {
         this.cedula = cedula;
         this.nombre = nombre;
         this.apellido = apellido;
+        this.fechaAgregado = fechaAgregado;
+        this.fechaNacimiento = fechaNacimiento;
+        this.email = email;
+        this.cedulaAsesorEncargado = cedulaAsesorEncargado;
+    }
+
+    public ClienteEntity(String cedula, String nombre, String apellido, Fecha fechaAgregado, Fecha fechaNacimiento, String email,
+                         String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String cedulaConyuge, String cedulaAsesorEncargado) {
+        this.cedula = cedula;
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.fechaAgregado=fechaAgregado;
         this.fechaNacimiento = fechaNacimiento;
         this.email = email;
         this.trabajo = trabajo;
@@ -61,6 +74,30 @@ public class ClienteEntity {
         this.ciudadDireccion = ciudadDireccion;
         this.direccion = direccion;
         this.cedulaConyuge = cedulaConyuge;
+        this.cedulaAsesorEncargado = cedulaAsesorEncargado;
+    }
+
+    public Fecha getFechaAgregado() {
+        return fechaAgregado;
+    }
+
+    public String getCedulaConyuge() {
+        return cedulaConyuge;
+    }
+
+    public String getCedulaAsesorEncargado() {
+        return cedulaAsesorEncargado;
+    }
+
+    public void setFechaAgregado(Fecha fechaAgregado) {
+        this.fechaAgregado = fechaAgregado;
+    }
+
+    public void setCedulaConyuge(String cedulaConyuge) {
+        this.cedulaConyuge = cedulaConyuge;
+    }
+
+    public void setCedulaAsesorEncargado(String cedulaAsesorEncargado) {
         this.cedulaAsesorEncargado = cedulaAsesorEncargado;
     }
 

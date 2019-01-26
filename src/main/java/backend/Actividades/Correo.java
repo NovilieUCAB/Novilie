@@ -36,9 +36,7 @@ public class Correo {
         return correoReceptor;
     }
 
-    public String getAsunto() {
-        return asunto;
-    }
+    public String getAsunto() { return asunto; }
 
     public String getMensaje() {
         return mensaje;
