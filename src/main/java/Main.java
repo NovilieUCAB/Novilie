@@ -19,11 +19,11 @@ public class Main extends Application {
 
     public static void main(String args[]) throws IOException {
 
-        FileInputStream serviceAccount =
-                new FileInputStream("novilie-firebase-adminsdk-od77w-74a1f74d4a.json");
+//        FileInputStream serviceAccount =
+//                new FileInputStream("novilie-firebase-adminsdk-od77w-74a1f74d4a.json");
         try{
             Conection  cnt = new Conection();
-        FirebaseApp.initializeApp(options);
+//        FirebaseApp.initializeApp(options);
 
 
             List<PublicidadEntity> lt =null ;
