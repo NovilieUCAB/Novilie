@@ -41,12 +41,12 @@ public class LoginController implements Initializable {
     public void loginAction() throws IOException {
 
             Stage navegador = new Stage();
-            Parent root = FXMLLoader.load(getClass().getResource("Navegador.fxml"));
+            Parent root = FXMLLoader.load(getClass().getResource("navigator.fxml"));
             Scene scene = new Scene(root,1080, 720);
             navegador.setScene(scene);
             navegador.initStyle(StageStyle.UNDECORATED);
             navegador.show();
-            navegador.setResizable(false);
+            navegador.setResizable(true);
 
 
         Iniciar_Sesion.getScene().getWindow().hide();

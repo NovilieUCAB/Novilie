@@ -2,3 +2,5 @@
 .idea/
 out/
 novilie-firebase-adminsdk-od77w-74a1f74d4a.json
+build/
+.DS_Store

@@ -19,3 +19,12 @@
 .btn:hover {
     -fx-background-color: rgba(255,255,255, 0.4);
 }
+
+#search_bar {
+    -fx-background-radius: 2000;
+    -fx-background-color: #fff;
+    -fx-padding: 10;
+    -fx-margin: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+
+}
