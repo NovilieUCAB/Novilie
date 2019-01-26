@@ -1,0 +1,105 @@
+#btn0{
+    -fx-min-height: 92.63;
+    -fx-min-width: 347.56;
+    -fx-background-image: url("../../images/Logo.png");
+    -fx-background-size: 35px 35px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: WHITE;
+    -fx-background-position: 100px 25px;
+    -fx-background-radius: 300px;
+    -fx-effect: dropshadow( gaussian, GREY, 10, 0.1, 0.0, 0.0 );
+    -fx-border-radius: 300px;
+    -fx-font-family: Roboto;
+    -fx-font-size:  36px;
+}
+
+#btn1{
+    -fx-min-height: 85;
+    -fx-min-width: 360;
+    -fx-background-image: url("../../images/Path_12.png");
+    -fx-background-size: 35px 35px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-background-position: 50px 25px;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-font-family: Roboto;
+    -fx-text-fill: WHITE;
+}
+
+#btn2{
+    -fx-min-height: 85;
+    -fx-min-width: 360;
+    -fx-background-image: url("../../images/Path_14.png");
+    -fx-background-size: 35px 35px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-background-position: 50px 25px;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-font-family: Roboto;
+    -fx-text-fill: WHITE;
+}
+
+#btn1.Over{
+
+}
+
+#btn3{
+    -fx-min-height: 85;
+    -fx-min-width: 360;
+    -fx-background-image: url("../../images/Group_10.png");
+    -fx-background-size: 35px 35px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-background-position: 50px 25px;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-font-family: Roboto;
+    -fx-text-fill: WHITE;
+}
+
+#btn4{
+    -fx-min-height: 85;
+    -fx-min-width: 360;
+    -fx-background-image: url("../../images/Group_12.png");
+    -fx-background-size: 35px 35px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: transparent;
+    -fx-background-position: 50px 25px;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-font-family: Roboto;
+    -fx-text-fill: WHITE;
+}
+
+#slt1{
+    -fx-background-image: url("../../images/Group 8.png");
+    -fx-background-size: 35px 35px;
+    -fx-background-repeat: no-repeat;
+}
+
+#bord{
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #78c0e0, #007FFF);
+}
+
+.text-field{
+    -fx-min-height: 60;
+    -fx-min-width: 530;
+    -fx-background-radius: 50px;
+    -fx-border-radius: 50px;
+    -fx-effect: dropshadow( gaussian, GREY, 5, 0.1, 0.0, 0.0 );
+    -fx-background-image: url('../../images/Path_20.png');
+    -fx-background-repeat: no-repeat;
+    -fx-background-color: WHITE;
+    -fx-background-position: 20px 12px;
+    -fx-font-family: Roboto;
+}
+
+.split-pane{
+
+}
+
+.anchor-pane{
+    -fx-background-color: #F4F7F8;
+}
