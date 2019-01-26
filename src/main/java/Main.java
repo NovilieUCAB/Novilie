@@ -1,17 +1,16 @@
-import com.google.auth.oauth2.GoogleCredentials;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.FirebaseOptions;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
-import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Main extends Application {
     public static void main(String args[]) throws IOException {
+
+/*
         FileInputStream serviceAccount =
                 new FileInputStream("novilie-firebase-adminsdk-od77w-74a1f74d4a.json");
 
@@ -21,6 +20,7 @@ public class Main extends Application {
                 .build();
 
         FirebaseApp.initializeApp(options);
+*/
 
         launch(args);
     }
@@ -28,9 +28,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-        primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 300, 275));
+
+        Parent root = FXMLLoader.load(getClass().getResource("Navegador.fxml"));
+        primaryStage.setTitle("Novilie");
+        primaryStage.initStyle(StageStyle.UNDECORATED);
+        primaryStage.centerOnScreen();
+        primaryStage.setScene(new Scene(root, 1080, 720));
         primaryStage.show();
+
+
     }
 }
