@@ -1,0 +1,30 @@
+#navigator {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #78c0e0, #007FFF);
+
+}
+
+#novilie_logo{
+    -fx-border-radius: 1000px 1000px 1000px 1000px;
+    -fx-background-color: #ffffff;
+}
+
+.btn {
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-color: transparent;
+    -fx-width: 300;
+    -fx-padding: 10;
+    -fx-font-colot: #ffffff;
+}
+
+.btn:hover {
+    -fx-background-color: rgba(255,255,255, 0.4);
+}
+
+#search_bar {
+    -fx-background-radius: 2000;
+    -fx-background-color: #fff;
+    -fx-padding: 10;
+    -fx-margin: 20;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 5, 0, 0, 2);
+
+}

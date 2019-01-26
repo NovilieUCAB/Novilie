@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #F4F7F8;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NavegadorController">
+   <left>
+      <Pane id="navigator" prefHeight="200.0" prefWidth="200.0" stylesheets="@navigator.css" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="propiedades-btn" fx:id="propiedadesBtn" alignment="CENTER" layoutX="25.0" layoutY="106.0" mnemonicParsing="false" onMouseClicked="#propiedades" prefHeight="38.0" prefWidth="150.0" styleClass="btn" stylesheets="@navigator.css" text="Propiedades" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-icon" translateX="-6.0">
+                     <image>
+                        <Image url="@images/home.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Button>
+            <Button id="propiedades-btn" fx:id="asesorBtn" alignment="CENTER" layoutX="25.0" layoutY="157.0" mnemonicParsing="false" onMouseClicked="#asesores" prefHeight="38.0" prefWidth="150.0" styleClass="btn" stylesheets="@navigator.css" text="Asesores" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="13.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-icon" translateX="-6.0">
+                     <image>
+                        <Image url="@images/Asesores.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="propiedades-btn" fx:id="clientesBtn" alignment="CENTER" layoutX="25.0" layoutY="209.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" styleClass="btn" stylesheets="@navigator.css" text="Recordatorios" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="13.0" />
+               </font>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-icon" translateX="-6.0">
+                     <image>
+                        <Image url="@images/notification.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button id="propiedades-btn" fx:id="informesBtn" alignment="CENTER" layoutX="25.0" layoutY="260.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" styleClass="btn" stylesheets="@navigator.css" text="Informes" textFill="WHITE">
+               <font>
+                  <Font name="Roboto Medium" size="13.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-icon" translateX="-6.0">
+                     <image>
+                        <Image url="@images/stats.png" />
+                     </image>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+               <padding>
+                  <Insets right="20.0" />
+               </padding>
+            </Button>
+            <ImageView fitHeight="59.0" fitWidth="161.0" layoutX="19.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/novilie_navigator_header.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <top>
+            <Pane id="search_bar" prefHeight="41.0" prefWidth="100.0" stylesheets="@navigator.css" BorderPane.alignment="CENTER">
+               <BorderPane.margin>
+                  <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+               </BorderPane.margin>
+               <children>
+                  <Pane layoutX="25.0" layoutY="10.0">
+                     <children>
+                        <ImageView fitHeight="18.0" fitWidth="18.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/search.png" />
+                           </image>
+                        </ImageView>
+                        <TextField layoutX="27.0" layoutY="-2.0" maxWidth="600.0" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="266.0" promptText="Buscar..." style="-fx-background-color: transparent;">
+                           <font>
+                              <Font name="Roboto Light" size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <AnchorPane fx:id="holderPane" prefHeight="301.0" style="-fx-background-color: #F4F7F8;" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

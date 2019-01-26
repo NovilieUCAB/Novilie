@@ -1,0 +1,18 @@
+.wrapper {
+    -fx-font-family: 'Roboto';
+    -fx-padding: 20 20 20 20;
+    -fx-background-colot: transparent;
+}
+
+.title {
+    -fx-fill: #1D2951;
+    -fx-font-family: 'Roboto Black';
+
+}
+
+.btn{
+    /* -fx-fill: #FFF; */
+    -fx-font-family: 'Roboto Medium';
+    -fx-background-radius: 100;
+    -fx-background-color: linear-gradient(from 25% 50% to 100% 100%, #78c0e0, #007FFF);
+}

@@ -1,5 +1,10 @@
-.grandle/
+.gradle/
 .idea/
 out/
 novilie-firebase-adminsdk-od77w-74a1f74d4a.json
+<<<<<<< HEAD
 lib/
+=======
+build/
+.DS_Store
+>>>>>>> 2a10e7bb4b8885395f680a032257c4c8087a6eb1
