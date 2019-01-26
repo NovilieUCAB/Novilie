@@ -47,7 +47,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button id="propiedades-btn" fx:id="clientesBtn" alignment="CENTER" layoutX="25.0" layoutY="209.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" styleClass="btn" stylesheets="@navigator.css" text="Clientes" textFill="WHITE">
+            <Button id="propiedades-btn" fx:id="clientesBtn" alignment="CENTER" layoutX="25.0" layoutY="209.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="150.0" styleClass="btn" stylesheets="@navigator.css" text="Recordatorios" textFill="WHITE">
                <font>
                   <Font name="Roboto Medium" size="13.0" />
                </font>
@@ -57,7 +57,7 @@
                <graphic>
                   <ImageView fitHeight="18.0" fitWidth="18.0" pickOnBounds="true" preserveRatio="true" styleClass="btn-icon" translateX="-6.0">
                      <image>
-                        <Image url="@images/client.png" />
+                        <Image url="@images/notification.png" />
                      </image>
                      <viewport>
                         <Rectangle2D />
