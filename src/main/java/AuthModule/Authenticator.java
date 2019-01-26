@@ -15,7 +15,7 @@ public class Authenticator {
 
     public void createUser(UsuarioSistemaEntity user){
         UserRecord.CreateRequest req = new UserRecord.CreateRequest()
-                .setUid("dr23")
+                .setUid("123456")
                 .setEmail("adrianluces111@gmail.com")
                 .setPassword("123456");
 
@@ -34,6 +34,27 @@ public class Authenticator {
             e.printStackTrace();
         }
 
+    }
+
+    public Boolean validate (String mail , String pass){
+        boolean found = false;
+        UserRecord record = null;
+
+        try {
+            record = auth.getUser(pass);
+        } catch (FirebaseAuthException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println(record.getEmail());
+
+        if((record.getEmail().equals(mail)))
+            found = true;
+        else
+            found = false;
+
+
+        return found;
     }
 
 }

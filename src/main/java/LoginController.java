@@ -1,3 +1,4 @@
+import AuthModule.Authenticator;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXPasswordField;
 import com.jfoenix.controls.JFXTextField;
@@ -10,6 +11,8 @@ import javafx.scene.image.ImageView;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -37,9 +40,24 @@ public class LoginController implements Initializable {
 
     }
 
+
     @FXML
     public void loginAction() throws IOException {
 
+        String mail = Correo.getText();
+        String pass = Contrasena.getText();
+
+        System.out.println(mail+"-----------"+pass);
+
+
+        boolean signed =false;
+
+        Authenticator auth = new Authenticator();
+        signed = auth.validate(mail,pass);
+
+        System.out.println(signed);
+
+        if(signed == true){
             Stage navegador = new Stage();
             Parent root = FXMLLoader.load(getClass().getResource("Navegador.fxml"));
             Scene scene = new Scene(root,1080, 720);
@@ -49,10 +67,10 @@ public class LoginController implements Initializable {
             navegador.setResizable(false);
 
 
-        Iniciar_Sesion.getScene().getWindow().hide();
-        System.out.println("Hola");
-
+            Iniciar_Sesion.getScene().getWindow().hide();
+            System.out.println("Hola");
         }
 
+        }
 
 }

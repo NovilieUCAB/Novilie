@@ -1,3 +1,5 @@
+import AuthModule.Authenticator;
+import BBDD.Conection;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,17 +12,10 @@ import java.io.IOException;
 public class Main extends Application {
     public static void main(String args[]) throws IOException {
 
-/*
-        FileInputStream serviceAccount =
-                new FileInputStream("novilie-firebase-adminsdk-od77w-74a1f74d4a.json");
+        Conection cnt = new Conection();
+        Authenticator au = new Authenticator();
+        au.createUser(null);
 
-        FirebaseOptions options = new FirebaseOptions.Builder()
-                .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setDatabaseUrl("https://novilie.firebaseio.com")
-                .build();
-
-        FirebaseApp.initializeApp(options);
-*/
 
         launch(args);
     }
