@@ -10,7 +10,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #F4FBFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.NavegadorController">
+<AnchorPane prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: #F4FBFF;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="NavegadorController">
     <children>
         <Rectangle arcHeight="5.0" arcWidth="5.0" height="720.0" layoutX="-44.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="322.0">
             <fill>
@@ -97,5 +97,6 @@
             </JFXTextField>
          </children>
       </AnchorPane>
+      <AnchorPane fx:id="holderPane" layoutX="328.0" layoutY="114.0" prefHeight="554.0" prefWidth="692.0" />
     </children>
 </AnchorPane>

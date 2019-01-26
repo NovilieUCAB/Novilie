@@ -29,13 +29,11 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("Navegador.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("Login.fxml"));
         primaryStage.setTitle("Novilie");
         primaryStage.initStyle(StageStyle.UNDECORATED);
         primaryStage.centerOnScreen();
-        primaryStage.setScene(new Scene(root, 1080, 720));
+        primaryStage.setScene(new Scene(root, 420, 420));
         primaryStage.show();
-
-
     }
 }
