@@ -1,33 +1,40 @@
 package BBDD.ModelosBD;
 
+import BBDD.Fecha;
+
 import java.util.HashMap;
 
 public class VentaEntity {
     private  String codInmueble;
     private  String cedulaCliente;
-    private HashMap<String,Integer> cedulaAsesorComision;
-    private HashMap<String,Boolean> criteriosCierre;
-    private  String tipoPago;
+    private  Fecha fechaRegistro;
+    private  HashMap<String,Integer> cedulaAsesorComision;
+    private  HashMap<String,Boolean> criteriosCierre;
     private  float porcentajeInicial;
+    private  float precioIncial;
+    private  float precioParcial;
     private  float precioDeContado;
     private  int tasaInteres;
     private  int numeroCuotas;
     private  float precioTotal;
-    private  int plazoPago;
+    private  int plazoPago; // esta determinado por años
 
-    public VentaEntity(String codInmueble, String cedulaCliente, HashMap<String, Integer> cedulaAsesorComision,
-                       HashMap<String, Boolean> criteriosCierre, String tipoPago, float porcentajeInicial, float precioDeContado,
+    public VentaEntity(String codInmueble, String cedulaCliente,Fecha fecha, HashMap<String, Integer> cedulaAsesorComision,
+                       HashMap<String, Boolean> criteriosCierre, float porcentajeInicial, float precioDeContado,
                        int tasaInteres, int plazoPago) {
         this.codInmueble = codInmueble;
         this.cedulaCliente = cedulaCliente;
+        this.fechaRegistro=fecha;
         this.cedulaAsesorComision = cedulaAsesorComision;
         this.criteriosCierre = criteriosCierre;
-        this.tipoPago = tipoPago;
         this.porcentajeInicial = porcentajeInicial;
         this.precioDeContado = precioDeContado;
         this.tasaInteres = tasaInteres;
         this.plazoPago = plazoPago;
         this.numeroCuotas=plazoPago*12;
+        this.precioIncial=precioDeContado*porcentajeInicial;
+        this.precioParcial=(precioDeContado-precioIncial)*(1+(tasaInteres/100))/numeroCuotas;
+        this.precioTotal=precioIncial+(precioParcial*numeroCuotas);
     }
 
     public String getCodInmueble() {
@@ -44,10 +51,6 @@ public class VentaEntity {
 
     public HashMap<String, Boolean> getCriteriosCierre() {
         return criteriosCierre;
-    }
-
-    public String getTipoPago() {
-        return tipoPago;
     }
 
     public float getPorcentajeInicial() {
@@ -88,10 +91,6 @@ public class VentaEntity {
 
     public void setCriteriosCierre(HashMap<String, Boolean> criteriosCierre) {
         this.criteriosCierre = criteriosCierre;
-    }
-
-    public void setTipoPago(String tipoPago) {
-        this.tipoPago = tipoPago;
     }
 
     public void setPorcentajeInicial(float porcentajeInicial) {

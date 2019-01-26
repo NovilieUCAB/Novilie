@@ -1,5 +1,7 @@
 package BBDD.ModelosBD;
 
+import BBDD.Fecha;
+
 import java.util.HashMap;
 
 public class CaptacionEntity {
@@ -7,12 +9,15 @@ public class CaptacionEntity {
     private String referenciaInmueble;
     private HashMap<String,Integer> cedulaAsesorComision = new HashMap<>();
     private HashMap<String,Boolean> criteriosAceptacion = new HashMap<>();
-    private int comisionInmueble;
+    private float comisionInmueble;
+    private Fecha fechaRegistro;
 
     public CaptacionEntity(){}
 
-    public CaptacionEntity(String referenciaInmueble, HashMap<String, Integer> cedulaAsesorComision, HashMap<String, Boolean> criteriosAceptacion, int comisionInmueble) {
+    public CaptacionEntity(String referenciaInmueble,Fecha fecha, HashMap<String, Integer> cedulaAsesorComision, HashMap<String,
+            Boolean> criteriosAceptacion, float comisionInmueble) {
         this.referenciaInmueble = referenciaInmueble;
+        this.fechaRegistro=fecha;
         this.cedulaAsesorComision = cedulaAsesorComision;
         this.criteriosAceptacion = criteriosAceptacion;
         this.comisionInmueble = comisionInmueble;
@@ -42,11 +47,11 @@ public class CaptacionEntity {
         this.criteriosAceptacion = criteriosAceptacion;
     }
 
-    public int getComisionInmueble() {
+    public float getComisionInmueble() {
         return comisionInmueble;
     }
 
-    public void setComisionInmueble(int comisionInmueble) {
+    public void setComisionInmueble(float comisionInmueble) {
         this.comisionInmueble = comisionInmueble;
     }
 }

@@ -9,9 +9,9 @@ import java.util.List;
 public class ClientePropietarioEntity extends ClienteEntity {
     private ArrayList<String> inmuebles = new ArrayList<>();
 
-    public ClientePropietarioEntity(String cedula, String nombre, String apellido, Fecha fechaNacimiento, String email,
+    public ClientePropietarioEntity(String cedula, String nombre, String apellido,Fecha fechaAgregado, Fecha fechaNacimiento, String email,
                                     String trabajo, String estadoDireccion, String ciudadDireccion, String direccion, String operacion,String cedulaConyuge, String cedulaAsesorEncargado){
-        super(cedula,nombre,apellido,fechaNacimiento,email,trabajo,estadoDireccion,ciudadDireccion,direccion, cedulaConyuge, cedulaAsesorEncargado);
+        super(cedula,nombre,apellido,fechaAgregado,fechaNacimiento,email,trabajo,estadoDireccion,ciudadDireccion,direccion, cedulaConyuge, cedulaAsesorEncargado);
         this.inmuebles = inmuebles;
     }
 
