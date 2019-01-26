@@ -40,4 +40,16 @@ public class Fecha {
     public void setAnio(int anio) {
         this.anio = anio;
     }
+
+    public boolean compareTo(Fecha fecha){
+        if (this.anio!=fecha.getAnio())
+            return false;
+        else
+            if(this.mes!=fecha.getMes())
+                return false;
+            else
+                return this.dia == fecha.getDia();
+
+
+    }
 }
